@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./components/NavBar";
 import UserCard from "./components/UserCard";
 import Wrapper from "./components/Wrapper";
