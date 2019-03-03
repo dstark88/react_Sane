@@ -3,6 +3,7 @@ import "./navBar.css";
 import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap'
 
 const NavBar = props => (
+
   <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,6 +25,11 @@ const NavBar = props => (
     </Form>
   </Navbar.Collapse>
 </Navbar>
+
+  <div>
+
+  </div>
+
 );
 
 export default NavBar;
