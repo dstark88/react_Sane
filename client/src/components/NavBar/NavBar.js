@@ -1,7 +1,7 @@
 import React from "react";
 import "./navBar.css";
 
-const Nav = props => (
+const NavBar = props => (
   <div>
 
   </div>
