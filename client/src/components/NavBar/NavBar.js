@@ -26,9 +26,6 @@ const NavBar = props => (
   </Navbar.Collapse>
 </Navbar>
 
-  <div>
-
-  </div>
 
 );
 
