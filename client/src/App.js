@@ -7,6 +7,12 @@ import Title from "./components/Title";
 import Footer from "./components/Footer";
 import Search from "./components/Search";
 // import Form from "./components/Form";
+import ReactDOM from 'react-dom';
+import { Wizard, Steps } from 'react-albus';
+import { StepOne } from './components/Wizard/StepOne';
+import { StepTwo } from './components/Wizard/StepTwo';
+import { StepThree } from './components/Wizard/StepThree';
+import { Navigation } from './components/Wizard/Navigation';
 
 
 class App extends Component {
@@ -17,6 +23,14 @@ class App extends Component {
         <Wrapper>
           <Title />
           <Search />
+          <Wizard>
+            <Steps>
+              <StepOne id="safe" />
+              <StepTwo id="age" />
+              <StepThree id="locations" />
+            </Steps>
+            <Navigation />
+          </Wizard>
           <UserCard>
        
           </UserCard>
