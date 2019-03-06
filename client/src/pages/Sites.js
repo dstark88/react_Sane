@@ -87,7 +87,7 @@ class Sites extends Component {
                 disabled={!(this.state.facility && this.state.city)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Submit
               </FormBtn>
             </form>
           </Col>
