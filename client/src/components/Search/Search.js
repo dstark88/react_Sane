@@ -4,12 +4,12 @@ import "./search.css"
 
 class Search extends Component {
     state = {
-        siteList: []
+        getSites: []
     }
 
     componentDidMount() {
-        // API.siteList()
-        //     .then(res => this.setState({ siteList: res.data.message }))
+        // API.getSites()
+        //     .then(res => this.setState({ getSites: res.data.message }))
         //     .catch(err => console.log(err));
     }
 
@@ -21,7 +21,7 @@ class Search extends Component {
                     <label htmlFor="site-choice">Site name:</label>
                     <input list="sitess" id="site-choice" name="site-choice" className="form-control" placeholder="Choose a Site" />
                     <datalist id="sites">
-                        {this.state.siteList.map(site => <option key={site}>{site}</option>)}
+                        {this.state.getSites.map(site => <option key={site}>{site}</option>)}
                     </datalist>
                     <button type="submit" className="btn btn-success btn-block mt-2">Search</button>
                 </form>
