@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
-import Form from "../components/Form";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, FormBtn } from "../components/Form";
 
 class Sites extends Component {
   state = {
@@ -73,16 +72,15 @@ class Sites extends Component {
               <Input
                 value={this.state.city}
                 onChange={this.handleInputChange}
-                name="City"
+                name="city"
                 placeholder="City (required)"
               />
               <Input
                 value={this.state.facility}
                 onChange={this.handleInputChange}
-                name="Facility"
+                name="facility"
                 placeholder="Facility (Optional)"
               />
-
               <FormBtn
                 disabled={!(this.state.facility && this.state.city)}
                 onClick={this.handleFormSubmit}
@@ -101,7 +99,7 @@ class Sites extends Component {
                   <ListItem key={site._id}>
                     <Link to={"/sites/" + site._id}>
                       <strong>
-                        {site.city} by {site.facility}
+                        {site.facility} by {site.city}
                       </strong>
                     </Link>
                   </ListItem>
