@@ -51,7 +51,7 @@ const siteSeed = [
 
 db.Site
   .remove({})
-  .then(() => db.Book.collection.insertMany(siteSeed))
+  .then(() => db.Site.collection.insertMany(siteSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

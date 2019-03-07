@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const siteSchema = new Schema({
-  id: mongoose.Types.ObjectId(),
   country: String,
   state: String,
   county: String,
