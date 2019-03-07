@@ -15,7 +15,6 @@ import Footer from "./components/Footer";
 // import Search from "./components/Search";
 // import Form from "./components/Form";
 // import Form from "./components/Form";
-import ReactDOM from 'react-dom';
 
 
 
