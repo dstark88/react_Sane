@@ -1,5 +1,7 @@
 import React from 'react';
 import { WithWizard } from 'react-albus';
+import { Link } from "react-router-dom";
+
 
 export const Navigation = () => (
   <WithWizard
@@ -17,9 +19,18 @@ export const Navigation = () => (
         )}
 
         {steps.indexOf(step) > 0 && (
-          <button className="btn-fluid btn-secondary" onClick={previous}>
-            Back
-          </button>
+          <>
+            <button>
+                <Link className="nav-link" to="/Sites">Yes</Link>
+            </button>
+            <button className="btn-fluid btn-no" onClick={no}>
+                No
+            </button>
+            <button className="btn-fluid btn-secondary" onClick={previous}>
+              <Link className="nav-link" to="/">Home</Link>
+            </button> 
+          </>
+
         )}
       </div>
     )}
