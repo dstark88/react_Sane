@@ -16,8 +16,7 @@ import NavBarTrans from "./components/NavBar/NavBarTrans";
 import UserCard from "./components/UserCard";
 import Wrapper from "./components/Wrapper";
 // import Title from "./components/Title";
-// import Footer from "./components/Footer";
-// import Search from "./components/Search";
+import Footer from "./components/Footer";
 // import Form from "./components/Form";  
 // import Form from "./components/Form";
 
@@ -49,7 +48,7 @@ class App extends Component {
           </UserCard>
 
         </Wrapper>
-        {/* <Footer /> */}
+        <Footer />
           
       </div>
     );
