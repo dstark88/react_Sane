@@ -6,6 +6,8 @@ import Sites from "./pages/Sites";
 import Detail from "./pages/Detail";
 // import Users from "./pages/Users";
 import NoMatch from "./pages/NoMatch";
+import About from "./pages/About"
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import NavBar from "./components/NavBar";
 import NavBarTrans from "./components/NavBar/NavBarTrans";
@@ -33,6 +35,7 @@ class App extends Component {
               <Route exact path="/wiz" component={Wiz} />
               <Route exact path="/sites" component={Sites} />
               <Route exact path="/sites/:id" component={Detail} />
+              <Route exact path="/about" component={About} />
               <Route component={NoMatch} />
             </Switch>
           </Router>
@@ -40,6 +43,7 @@ class App extends Component {
           <UserCard>
        
           </UserCard>
+
         </Wrapper>
         {/* <Footer /> */}
           
