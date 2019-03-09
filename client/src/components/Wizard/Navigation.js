@@ -10,10 +10,10 @@ export const Navigation = () => (
         {steps.indexOf(step) < steps.length - 1 && (
             <>
                 <button className="btn-fluid margin-1-b" onClick={next}>
-                    Yes
+                    <Link className="nav-link"  to="#">Yes</Link>
                 </button>
                 <button className="btn-fluid btn-no" onClick={no}>
-                  <Link to="/Call">No</Link>
+                  <Link className="nav-link"  to="/Call">No</Link>
                 </button> 
             </>
         )}
@@ -21,13 +21,13 @@ export const Navigation = () => (
         {steps.indexOf(step) > 0 && (
           <>
             <button>
-                <Link to="/Sites">Yes</Link>
+                <Link className="nav-link"  to="/Sites">Yes</Link>
             </button>
             <button className="btn-fluid btn-no" onClick={no}>
-              <Link to="/SaneP">No</Link>
+              <Link className="nav-link" to="/SaneP">No</Link>
             </button>
             <button className="btn-fluid btn-secondary" onClick={previous}>
-              <Link to="/">Home</Link>
+              <Link className="nav-link"  to="/">Home</Link>
             </button> 
           </>
 
