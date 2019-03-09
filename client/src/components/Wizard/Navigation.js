@@ -13,7 +13,7 @@ export const Navigation = () => (
                     Yes
                 </button>
                 <button className="btn-fluid btn-no" onClick={no}>
-                    No
+                  <Link to="/Call">No</Link>
                 </button> 
             </>
         )}
@@ -21,13 +21,13 @@ export const Navigation = () => (
         {steps.indexOf(step) > 0 && (
           <>
             <button>
-                <Link className="nav-link" to="/Sites">Yes</Link>
+                <Link to="/Sites">Yes</Link>
             </button>
             <button className="btn-fluid btn-no" onClick={no}>
-                No
+              <Link to="/SaneP">No</Link>
             </button>
             <button className="btn-fluid btn-secondary" onClick={previous}>
-              <Link className="nav-link" to="/">Home</Link>
+              <Link to="/">Home</Link>
             </button> 
           </>
 

@@ -6,7 +6,9 @@ import Sites from "./pages/Sites";
 import Detail from "./pages/Detail";
 // import Users from "./pages/Users";
 import NoMatch from "./pages/NoMatch";
-import About from "./pages/About"
+import About from "./pages/About";
+import Call from "./pages/Call";
+import SaneP from "./pages/SaneP";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import NavBar from "./components/NavBar";
@@ -36,6 +38,8 @@ class App extends Component {
               <Route exact path="/sites" component={Sites} />
               <Route exact path="/sites/:id" component={Detail} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/call" component={Call} />
+              <Route exact path="/sanep" component={SaneP} />
               <Route component={NoMatch} />
             </Switch>
           </Router>
