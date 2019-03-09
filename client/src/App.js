@@ -7,13 +7,14 @@ import Detail from "./pages/Detail";
 // import Users from "./pages/Users";
 import NoMatch from "./pages/NoMatch";
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
+import NavBarTrans from "./components/NavBar/NavBarTrans";
 import UserCard from "./components/UserCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
-import Footer from "./components/Footer";
+// import Title from "./components/Title";
+// import Footer from "./components/Footer";
 // import Search from "./components/Search";
-// import Form from "./components/Form";
+// import Form from "./components/Form";  
 // import Form from "./components/Form";
 
 
@@ -22,9 +23,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <Wrapper>
-          <Title />
+        <NavBarTrans />
+        <Wrapper> 
+          {/* <Title /> */}
 
           <Router>
             <Switch>
@@ -40,7 +41,7 @@ class App extends Component {
        
           </UserCard>
         </Wrapper>
-        <Footer />
+        {/* <Footer /> */}
           
       </div>
     );
