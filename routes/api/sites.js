@@ -4,7 +4,7 @@ const sitesController = require("../../controllers/sitesController");
 // Matches with "/api/sites"
 router.route("/")
   .get(sitesController.findAll)
-  .post(sitesController.create);
+  .post(sitesController.findSearch);
 
 // Matches with "/api/sites/:id"
 router

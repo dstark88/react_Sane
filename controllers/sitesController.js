@@ -5,7 +5,13 @@ module.exports = {
   findAll: function(req, res) {
     db.Site
       .find(req.query)
-      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findSearch: function(req, res) {
+    console.log("req.query", req.query, "req.body: ", req.body);
+    db.Site
+      .find({ city: req.body.city })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

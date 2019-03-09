@@ -49,13 +49,14 @@ class Sites extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.city && this.state.facility) {
-      API.saveSite({
+    console.log("handleFormSubmit hit");
+    if (this.state.city) {
+      API.findSites({
         city: this.state.city,
         facility: this.state.facility,
         // phone_1: this.state.phone_1
       })
-        .then(res => this.loadSites())
+        .then(res => this.setState({ sites: res.data }))
         .catch(err => console.log(err));
     }
   };
@@ -73,7 +74,7 @@ class Sites extends Component {
                 value={this.state.city}
                 onChange={this.handleInputChange}
                 name="city"
-                placeholder="City (required)"
+                placeholder="City (Optional)"
               />
               <Input
                 value={this.state.facility}
@@ -82,7 +83,7 @@ class Sites extends Component {
                 placeholder="Facility (Optional)"
               />
               <FormBtn
-                disabled={!(this.state.facility && this.state.city)}
+                disabled={!this.state.city}
                 onClick={this.handleFormSubmit}
               >
                 Submit
