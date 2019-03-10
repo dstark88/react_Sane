@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
+import SimpleMap from "../components/Map";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -93,6 +94,7 @@ class Sites extends Component {
             <Jumbotron>
               <h1>Sites on my list</h1>
             </Jumbotron>
+            <SimpleMap />
             {this.state.sites.length ? (
               <List>
                 {this.state.sites.map(site => (
