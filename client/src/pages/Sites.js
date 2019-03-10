@@ -13,6 +13,7 @@ class Sites extends Component {
     sites: [],
     country: "",
     state: "",
+    county: "",
     city: "",
     facility: "", 
     // latitude,
@@ -28,7 +29,7 @@ class Sites extends Component {
   loadSites = () => {
     API.getSites()
       .then(res =>
-        this.setState({ sites: res.data, city: "", facility: ""
+        this.setState({ sites: res.data, city: "", county: ""
         // , phone_1: "" 
     })
       )
@@ -50,13 +51,14 @@ class Sites extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.city && this.state.facility) {
-      API.saveSite({
+    console.log("handleFormSubmit hit");
+    if (this.state.city || this.state.county) {
+      API.findSites({
         city: this.state.city,
-        facility: this.state.facility,
+        county: this.state.county,
         // phone_1: this.state.phone_1
       })
-        .then(res => this.loadSites())
+        .then(res => this.setState({ sites: res.data }))
         .catch(err => console.log(err));
     }
   };
@@ -74,16 +76,15 @@ class Sites extends Component {
                 value={this.state.city}
                 onChange={this.handleInputChange}
                 name="city"
-                placeholder="City (required)"
+                placeholder="City (Optional)"
               />
               <Input
-                value={this.state.facility}
+                value={this.state.county}
                 onChange={this.handleInputChange}
-                name="facility"
-                placeholder="Facility (Optional)"
+                name="county"
+                placeholder="County (Optional)"
               />
               <FormBtn
-                disabled={!(this.state.facility && this.state.city)}
                 onClick={this.handleFormSubmit}
               >
                 Submit
@@ -101,7 +102,7 @@ class Sites extends Component {
                   <ListItem key={site._id}>
                     <Link to={"/sites/" + site._id}>
                       <strong>
-                        {site.facility} by {site.city}
+                        {site.facility} by {site.city} in {site.county} County
                       </strong>
                     </Link>
                   </ListItem>

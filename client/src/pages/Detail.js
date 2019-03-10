@@ -12,7 +12,7 @@ class Detail extends Component {
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   componentDidMount() {
     API.getSite(this.props.match.params.id)
-      .then(res => this.setState({ book: res.data }))
+      .then(res => this.setState({ site: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -23,7 +23,7 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.site.facility} by {this.state.site.city}
+                {this.state.site.city} by {this.state.site.facility} {this.state.site.county}
               </h1>
             </Jumbotron>
           </Col>
