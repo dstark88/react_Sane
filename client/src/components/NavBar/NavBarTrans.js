@@ -4,8 +4,8 @@ import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from 'react-boots
 
 const NavBarTrans = props => (
 
-  <div class="navbar transparent navbar-inverse">
-    <div class="navbar-inner">
+  <div className="navbar transparent navbar-inverse">
+    <div className="navbar-inner">
       <Navbar expand="lg">
         <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
