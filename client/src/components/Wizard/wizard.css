@@ -1,3 +1,4 @@
-button {
-    color: blue;
+button, .btn-fluid {
+    margin: 10px;
 }
+
