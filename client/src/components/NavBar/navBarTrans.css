@@ -10,16 +10,17 @@
 }
 
 .navbar-light .navbar-brand {
-    color: lightgrey;
+    color: white;
     font-weight: lighter;
     font-family: 'Varela Round', sans-serif;
     
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: lightgrey;
+    color: white;
     font-weight: lighter;
     font-family: 'Varela Round', sans-serif;
+
 }
 
 button {
@@ -32,7 +33,21 @@ button {
 
 .nav-link {
     color: white;
-    font: outline;
     font-weight: lighter;
     font-family: 'Varela Round', sans-serif;
 }
+
+
+a{
+    color: white !important;
+    text-decoration:none;
+}
+
+a:hover{
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px  rgb(4, 174, 143);
+}
+
+
