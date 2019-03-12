@@ -9,6 +9,7 @@ import NoMatch from "./pages/NoMatch";
 import About from "./pages/About";
 import Call from "./pages/Call";
 import SaneP from "./pages/SaneP";
+import Stories from "./pages/Stories";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import NavBar from "./components/NavBar";
@@ -39,6 +40,7 @@ class App extends Component {
               <Route exact path="/about" component={About} />
               <Route exact path="/call" component={Call} />
               <Route exact path="/sanep" component={SaneP} />
+              <Route exact path="/stories" component={Stories} />
               <Route component={NoMatch} />
             </Switch>
           </Router>

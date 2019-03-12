@@ -14,6 +14,7 @@ const NavBarTrans = props => (
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/sites">Search</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
+            <Nav.Link href="/stories">Stories</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
