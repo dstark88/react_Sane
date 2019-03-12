@@ -12,14 +12,13 @@ import SaneP from "./pages/SaneP";
 import Stories from "./pages/Stories";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
-// import NavBar from "./components/NavBar";
 import NavBarTrans from "./components/NavBar/NavBarTrans";
 import UserCard from "./components/UserCard";
 import Wrapper from "./components/Wrapper";
 // import Title from "./components/Title";
 import Footer from "./components/Footer";
 // import Form from "./components/Form";  
-// import Form from "./components/Form";
+
 
 
 
