@@ -1,6 +1,7 @@
 import React from 'react';
 import { WithWizard } from 'react-albus';
 import { Link } from "react-router-dom";
+import "./wizard.css"
 
 
 
