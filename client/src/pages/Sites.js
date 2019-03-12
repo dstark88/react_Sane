@@ -91,6 +91,7 @@ class Sites extends Component {
               center={this.state.userLocation}
               lat={this.state.userLocation.lat}
               lng={this.state.userLocation.lng}
+              sites={this.state.sites}
             />
             <form>
               <Input
