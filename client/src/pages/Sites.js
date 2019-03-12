@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
+import SimpleMap from "../components/Map";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -15,14 +16,33 @@ class Sites extends Component {
     county: "",
     city: "",
     facility: "", 
-    // latitude,
-    // longitude,
+    lat: null,
+    lng: null,
     // phone_1,
     web_address: "",
+    userLocation: {
+      lat: null,
+      lng: null,
+    }
   };
 
   componentDidMount() {
     this.loadSites();
+    this.getLocation();
+  }
+
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(this.handleUserLocation);
+    } else { 
+      console.log("Geolocation is not supported by this browser.");
+    }
+  }
+  
+  handleUserLocation = (position) => {
+    console.log(position)
+    this.setState({ userLocation: {lat: position.coords.latitude, lng: position.coords.longitude} })
+    console.log(this.state);
   }
 
   loadSites = () => {
@@ -94,6 +114,11 @@ class Sites extends Component {
             <Jumbotron>
               <h1>Sites on my list</h1>
             </Jumbotron>
+            <SimpleMap 
+              center={this.state.userLocation}
+              lat={this.state.userLocation.lat}
+              lng={this.state.userLocation.lng}
+            />
             {this.state.sites.length ? (
               <List>
                 {this.state.sites.map(site => (

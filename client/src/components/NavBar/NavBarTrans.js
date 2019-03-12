@@ -4,23 +4,23 @@ import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from 'react-boots
 
 const NavBarTrans = props => (
 
-<div class="navbar transparent navbar-inverse">
-    <div class="navbar-inner">
-<Navbar expand="lg">
-  <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="/sites">Search</Nav.Link>
-      <Nav.Link href="/about">About Us</Nav.Link>
-    </Nav>
+  <div className="navbar transparent navbar-inverse">
+    <div className="navbar-inner">
+      <Navbar expand="lg">
+        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/sites">Search</Nav.Link>
+            <Nav.Link href="/about">About Us</Nav.Link>
+            <Nav.Link href="/stories">Stories</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
+  </div>
 
-  </Navbar.Collapse>
-</Navbar>
-    </div>
-    </div>
-  
 )
 
 export default NavBarTrans;

@@ -1,11 +1,25 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-image: url ("/assets/images/bell-flower-bloom-blossom-51425.jpg");
+  font-family: 'Varela Round', sans-serif;
+  background-image: url ("/assets/images/AdobeStock_103776774.jpeg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100%;
+  font-family: 'Varela Round', sans-serif;
 }
+
+h1 {
+  color: lightgrey;
+  margin-bottom: 5%;
+  font-weight: lighter;
+  font-family: 'Varela Round', sans-serif;
+}
+
+button {
+  color: black;
+}
+
+
