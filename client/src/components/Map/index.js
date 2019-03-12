@@ -20,6 +20,7 @@ const AnyReactComponent = ({ text }) => (
 class SimpleMap extends Component {
  
   render() {
+    console.log(this.props.sites);
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '300px', width: '100%' }}>
@@ -28,11 +29,15 @@ class SimpleMap extends Component {
           center={this.props.center}
           zoom= {11} 
         >
+
+        {this.props.sites.map(sites => (
           <AnyReactComponent
-            lat={this.props.lat}
-            lng={this.props.lng}
-            text={'Kreyser Avrora'}
+            lat={sites.Latitude}
+            lng={sites.Longitude}
+            text={sites["Facility or Program Name"]}
           />
+        ))}
+          
         </GoogleMapReact>
       </div>
     );
