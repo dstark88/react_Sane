@@ -48,9 +48,7 @@ class Sites extends Component {
   loadSites = () => {
     API.getSites()
       .then(res =>
-        this.setState({ sites: res.data, city: "", county: ""
-        // , phone_1: "" 
-    })
+        this.setState({ sites: res.data, city: "", county: "" })
       )
       .catch(err => console.log(err));
   };
@@ -75,7 +73,6 @@ class Sites extends Component {
       API.findSites({
         city: this.state.city,
         county: this.state.county,
-        // phone_1: this.state.phone_1
       })
         .then(res => this.setState({ sites: res.data }))
         .catch(err => console.log(err));
@@ -88,8 +85,13 @@ class Sites extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Site would you like to search for?</h1>
+              <h1>Search for SANE Locations?</h1>
             </Jumbotron>
+            <SimpleMap 
+              center={this.state.userLocation}
+              lat={this.state.userLocation.lat}
+              lng={this.state.userLocation.lng}
+            />
             <form>
               <Input
                 value={this.state.city}
@@ -112,13 +114,8 @@ class Sites extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Sites on my list</h1>
+              <h1>SANE Locations</h1>
             </Jumbotron>
-            <SimpleMap 
-              center={this.state.userLocation}
-              lat={this.state.userLocation.lat}
-              lng={this.state.userLocation.lng}
-            />
             {this.state.sites.length ? (
               <List>
                 {this.state.sites.map(site => (
