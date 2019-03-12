@@ -7,7 +7,15 @@ const NavBarTrans = props => (
   <div className="navbar transparent navbar-inverse">
     <div className="navbar-inner">
       <Navbar expand="lg">
-        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+      <Navbar.Brand href="#home">
+      <img
+        src="/assets/images/pslogo.jpg"
+        width="100"
+        height="100"
+        className="d-inline-block align-top"
+        alt="Project SANE logo"
+      />
+    </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
