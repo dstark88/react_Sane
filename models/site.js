@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
+const objectId = mongoose.Schema.Types.ObjectId
 const Schema = mongoose.Schema;
 
 const siteSchema = new Schema({
+  _id: objectId,
   country: String,
   state: String,
   county: String,

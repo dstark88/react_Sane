@@ -122,7 +122,7 @@ class Sites extends Component {
                 {this.state.sites.map(site => (
                   <ListItem key={site._id}>
                     <Link to={"/sites/" + site._id}>
-                      <strong>
+                      <strong id="siteText">
                         {site.facility} by {site.city} in {site.county} County
                       </strong>
                     </Link>
