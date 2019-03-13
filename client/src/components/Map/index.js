@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
  
-const AnyReactComponent = ({ text }) => (
+const MapMarker = ({ text }) => (
   <div style={{
-    color: 'white', 
-    background: 'grey',
-    padding: '15px 10px',
-    display: 'inline-flex',
-    textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '100%',
+    // color: 'white', 
+    // background: 'grey',
+    // padding: '15px 10px',
+    // display: 'inline-flex',
+    // textAlign: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    // borderRadius: '100%',
     transform: 'translate(-50%, -50%)'
   }}>
     {text}
@@ -31,7 +31,7 @@ class SimpleMap extends Component {
         >
 
         {this.props.sites.map(sites => (
-          <AnyReactComponent
+          <MapMarker
             lat={sites.Latitude}
             lng={sites.Longitude}
             text={sites["Facility or Program Name"]}
