@@ -10,6 +10,8 @@ import About from "./pages/About";
 import Call from "./pages/Call";
 import SaneP from "./pages/SaneP";
 import Stories from "./pages/Stories";
+import Login from "./pages/Login";
+import AddStories from "./pages/AddStories";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarTrans from "./components/NavBar/NavBarTrans";
@@ -40,6 +42,8 @@ class App extends Component {
               <Route exact path="/call" component={Call} />
               <Route exact path="/sanep" component={SaneP} />
               <Route exact path="/stories" component={Stories} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/addStories" component={AddStories} />
               <Route component={NoMatch} />
             </Switch>
           </Router>

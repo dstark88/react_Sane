@@ -9,7 +9,7 @@ export default {
   findSites: function(siteInfo) {
     return axios.post("/api/sites/", siteInfo);
   },
-  // Deletes the site with the given id
+  // Deletes with the given id
   deleteSite: function(id) {
     return axios.delete("/api/sites/" + id);
   },
@@ -21,8 +21,7 @@ export default {
   createPost: function(postInfo) {
     return axios.post("/api/posts/", postInfo);
   },
-
-  // Gets the book with the given id
+  // Gets with the given id
   getPosts: function() {
     return axios.get("/api/posts/");
   },
@@ -31,8 +30,20 @@ export default {
   // deleteBook: function(id) {
   //   return axios.delete("/api/books/" + id);
   // },
-  // Saves a book to the database
+  // Saves to the database
   savePost: function(postData) {
     return axios.post("/api/posts", postData);
-  }
+  },
+
+  createUser: function(userInfo) {
+    return axios.post("/api/users/", userInfo);
+  },
+  // Gets with the given id
+  getUsers: function() {
+    return axios.get("/api/users/");
+  },
+  // Saves to the database
+  // saveUser: function(userData) {
+  //   return axios.post("/api/users", userData);
+  // },
 };
