@@ -20,8 +20,9 @@ class Posts extends Component {
 
   loadPosts = () => {
     API.getPosts()
-      .then(res =>
-        this.setState({ posts: res.data, title: "", author: "", story: "" })
+      .then(res => {
+        console.log(res, "res in loadpost");
+        this.setState({ posts: res.data, title: "", author: "", story: "" })}
       )
       .catch(err => console.log(err));
   };
@@ -41,13 +42,16 @@ class Posts extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
+    console.log("handleFormSubmit hit");
+    if (this.state.title && this.state.author && this.state.story) {
       API.savePost({
         title: this.state.title,
         author: this.state.author,
         story: this.state.story
       })
-        .then(res => this.loadPosts())
+        .then(res => {
+          console.log(res, "res in handle");
+        this.loadPosts({ posts: res.data })})
         .catch(err => console.log(err));
     }
   };
@@ -80,7 +84,6 @@ class Posts extends Component {
                 placeholder="Story (required)"
               />
               <FormBtn
-                disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
                 Submit
@@ -97,7 +100,11 @@ class Posts extends Component {
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong>
-                        {post.title} by {post.author}
+                        {post.title} by {post.author} 
+                      </strong>
+                      <br></br>
+                      <strong>
+                        {post.story}
                       </strong>
                     </Link>
                   </ListItem>

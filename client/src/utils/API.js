@@ -18,13 +18,15 @@ export default {
   //   return axios.post("/api/sites", siteData);
   // }
 
-  getPosts: function() {
-    return axios.get("/api/posts");
+  createPost: function(postInfo) {
+    return axios.post("/api/posts/", postInfo);
   },
+
   // Gets the book with the given id
-  getPosts: function(id) {
-    return axios.get("/api/posts/" + id);
+  getPosts: function() {
+    return axios.get("/api/posts/");
   },
+
   // Deletes the book with the given id
   // deleteBook: function(id) {
   //   return axios.delete("/api/books/" + id);
