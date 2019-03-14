@@ -54,7 +54,7 @@ class Sites extends Component {
     API.getSites()
       .then(res => {
         console.log("load sites data", res);
-        this.setState({ sites: res.data, city: "", county: "" })
+        this.setState({ sites: res.data, city: "", county: "", facility: "" })
       })
       .catch(err => console.log(err));
 
@@ -70,10 +70,11 @@ class Sites extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("handleFormSubmit hit");
-    if (this.state.city || this.state.county) {
+    if (this.state.city || this.state.county || this.state.facility) {
       API.findSites({
         city: this.state.city,
         county: this.state.county,
+        facility: this.state.facility,
       })
         .then(res => this.setState({ sites: res.data }))
         .catch(err => console.log(err));
@@ -85,20 +86,20 @@ class Sites extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            
-              <h1>Search for SANE Locations?</h1>
-            
+            <center>
+              <h1>Search for SANE Locations</h1>
+            </center>
             <SimpleMap 
               center={this.state.userLocation}
               lat={this.state.userLocation.lat}
               lng={this.state.userLocation.lng}
               sites={this.state.sites}
             />
-            <br>
-            </br>
+
+            <h3>Search by one of the options below.</h3>
             <form>
               <Input
-                list= "city"
+                list="city"
                 value={this.state.city}
                 onChange={this.handleInputChange}
                 name="city"
@@ -108,11 +109,25 @@ class Sites extends Component {
                 {this.state.sites.map(site => <option key={site._id}>{site.City}</option>)}
               </datalist>
               <Input
+                list="county"
                 value={this.state.county}
                 onChange={this.handleInputChange}
                 name="county"
                 placeholder="County (Optional)"
               />
+              <datalist id="county">
+                {this.state.sites.map(site => <option key={site._id}>{site.County}</option>)}
+              </datalist>
+              <Input
+                list="facility"
+                value={this.state.facility}
+                onChange={this.handleInputChange}
+                name="facility"
+                placeholder="Facility (Optional)"
+              />
+              <datalist id="facility">
+                {this.state.sites.map(site => <option key={site._id}>{site.Facility}</option>)}
+              </datalist>
               <FormBtn
                 onClick={this.handleFormSubmit}
               >
@@ -121,9 +136,9 @@ class Sites extends Component {
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            
+            <center>
               <h1>SANE Locations</h1>
-            
+            </center>
             {this.state.sites.length ? (
               <List>
                 {this.state.sites.map(site => (
