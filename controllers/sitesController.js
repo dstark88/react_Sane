@@ -9,11 +9,13 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findSearch: function(req, res) {
-    console.log("req.body: ", req.body.county);
+    console.log("req.body.city: ", req.body.city);
 
     db.Site
-      .find({$or:[{ city: req.body.city}, { county: req.body.county}]})
-      .then(dbModel => res.json(dbModel))
+      .find({$or:[{ City: req.body.city}, { County: req.body.county}]})
+      .then(dbModel => 
+        res.json(dbModel)
+        )
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {

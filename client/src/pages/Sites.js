@@ -29,6 +29,11 @@ class Sites extends Component {
   componentDidMount() {
     this.loadSites();
     this.getLocation();
+    API.getSites()
+    .then(res => console.log(res.data, "res.data")
+      // this.setState({ sites: res.data })
+    )
+    .catch(err => console.log(err));
   }
 
   getLocation() {
@@ -52,13 +57,8 @@ class Sites extends Component {
         this.setState({ sites: res.data, city: "", county: "" })
       })
       .catch(err => console.log(err));
-  };
 
-//   deleteBook = id => {
-//     API.deleteBook(id)
-//       .then(res => this.loadBooks())
-//       .catch(err => console.log(err));
-//   };
+  };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -99,11 +99,15 @@ class Sites extends Component {
             <h1>Search for a site</h1>
             <form>
               <Input
+                list= "city"
                 value={this.state.city}
                 onChange={this.handleInputChange}
                 name="city"
                 placeholder="City (Optional)"
               />
+              <datalist id="city">
+                {this.state.sites.map(site => <option key={site._id}>{site.City}</option>)}
+              </datalist>
               <Input
                 value={this.state.county}
                 onChange={this.handleInputChange}

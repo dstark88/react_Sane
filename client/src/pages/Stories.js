@@ -29,8 +29,8 @@ class Posts extends Component {
     return (
       <Container fluid>
         <Row>
-
-          <Col size="md-12">
+          <Col size="md-2" />
+          <Col size="md-8">
             <center>
               <h1>Stories</h1>
               <button><Link className="nav-link" to="/Login">Add Your Story</Link></button>
