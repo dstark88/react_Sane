@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import SimpleMap from "../components/Map";
-import Jumbotron from "../components/Jumbotron";
+// import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
@@ -84,15 +84,17 @@ class Sites extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
+            
               <h1>Search for SANE Locations?</h1>
-            </Jumbotron>
+            
             <SimpleMap 
               center={this.state.userLocation}
               lat={this.state.userLocation.lat}
               lng={this.state.userLocation.lng}
               sites={this.state.sites}
             />
+            <br>
+            </br>
             <form>
               <Input
                 value={this.state.city}
@@ -114,9 +116,9 @@ class Sites extends Component {
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
+            
               <h1>SANE Locations</h1>
-            </Jumbotron>
+            
             {this.state.sites.length ? (
               <List>
                 {this.state.sites.map(site => (
