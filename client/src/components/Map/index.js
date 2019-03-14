@@ -10,7 +10,7 @@ const MapMarker = () => (
 class SimpleMap extends Component {
  
   render() {
-    console.log(this.props.sites);
+    // console.log(this.props.sites);
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '300px', width: '100%', marginBottom: "15px" }}>

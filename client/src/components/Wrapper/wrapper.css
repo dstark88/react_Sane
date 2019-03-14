@@ -16,6 +16,12 @@
     color: black;
 }
 
+.btn-success {
+    background-color: rgb(4, 174, 143);
+    border-color: rgb(4, 174, 143);
+    opacity: 0.60;
+}
+
 
 
 
