@@ -1,3 +1,12 @@
 input.form-control {
     padding-top: 50%;
 }
+
+button {
+    background-color: rgb(4, 174, 143);
+    border-color: rgb(4, 174, 143);
+    opacity: 0.9 !important;
+    box-shadow: 0 .1875rem .1875rem 0 rgba(0,0,0,.1)!important;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+}
