@@ -13,8 +13,8 @@ const siteSchema = new Schema({
   zip: { type: Number, min: 5, max: 5}, 
   latitude: Schema.Types.Decimal128,
   longitude: Schema.Types.Decimal128,
-  phone_1: { type: String, min: 10, max: 12, required: true },
-  phone_2: { type: String, min: 10, max: 12 },
+  phone_1: { type: String, min: 10, max: 14, required: true },
+  phone_2: { type: String, min: 10, max: 14 },
   web_address: String,
   additional_info: String
 });
