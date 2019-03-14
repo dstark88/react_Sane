@@ -36,19 +36,20 @@ button {
 .nav-link {
     color: white;
     font-weight: lighter;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
-
 
 a{
     color: white !important;
     text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
 }
 
 a:hover{
-    -webkit-stroke-width: 5.3px;
+    /* -webkit-stroke-width: 5.3px;
     -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF; */
     text-shadow: 1px 0px 20px  rgb(169, 205, 201);
 }
 

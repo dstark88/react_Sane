@@ -9,7 +9,8 @@ function Home() {
       <Row>
         <Col size="md-12">
           <Jumbotron>
-            <h1>This is our home page</h1>
+            <h1>Project S.A.N.E.</h1>
+            <p>vnaiovnaoinva qacenai aoinciuvb o  aoinsdopi a a uibvpiob aio aknvcai aoib iopvb a aob a aosi.</p>
             <button><Link className="nav-link" to="/Wiz">SANE Locator</Link></button>
           </Jumbotron>
         </Col>
