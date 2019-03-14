@@ -137,7 +137,7 @@ class Sites extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <center>
-              <h1>SANE Locations</h1>
+              <h1>All SANE Locations</h1>
             </center>
             {this.state.sites.length ? (
               <List>
