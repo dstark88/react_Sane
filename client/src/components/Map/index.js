@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import "./style.css";
  
-const MapMarker = ({ text }) => (
-  <div style={{
-    // color: 'white', 
-    // background: 'grey',
-    // padding: '15px 10px',
-    // display: 'inline-flex',
-    // textAlign: 'center',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // borderRadius: '100%',
-    transform: 'translate(-50%, -50%)'
-  }}>
-    {text}
+const MapMarker = () => (
+  <div className="styled-marker"> 
   </div>
 );
  
@@ -34,7 +24,7 @@ class SimpleMap extends Component {
           <MapMarker
             lat={sites.Latitude}
             lng={sites.Longitude}
-            text={sites["Facility or Program Name"]}
+            onClick={this.handleClick}
           />
         ))}
           
