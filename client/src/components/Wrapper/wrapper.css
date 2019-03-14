@@ -15,6 +15,9 @@
 #siteText {
     color: black;
 }
+#storyText {
+    color: teal;
+}
 
 .btn-success {
     border: 2px solid black;

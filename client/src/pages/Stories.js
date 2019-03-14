@@ -41,11 +41,11 @@ class Posts extends Component {
                 {this.state.posts.map(post => (
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
-                      <strong>
+                      <strong id="storyText">
                         {post.title} by {post.author} 
                       </strong>
                       <br></br>
-                      <strong>
+                      <strong id="storyText">
                         {post.story}
                       </strong>
                     </Link>
