@@ -1,41 +1,46 @@
 const db = require("../models");
 
-// Defining methods for the sitesController
+// Defining methods for the usersController
 module.exports = {
   findAll: function(req, res) {
-    db.Site
+    db.User
       .find(req.query)
+      .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findSearch: function(req, res) {
-    console.log("req.body: ", req.body.county);
 
-    db.Site
-      .find({$or:[{ city: req.body.city}, { county: req.body.county}]})
+  createUser: function(req, res) {
+    console.log("req.body.title: ", req.body.title);
+
+    db.User
+      .create({$or:[{ title: req.body.title}, { story: req.body.story}]})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
   findById: function(req, res) {
-    db.Site
+    db.User
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    db.Site
+    console.log("req.body", req.body);
+
+    db.User
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.Site
+    db.User
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.Site
+    db.User
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))

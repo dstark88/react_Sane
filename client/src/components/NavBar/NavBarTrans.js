@@ -1,6 +1,10 @@
 import React from "react";
 import "./navBarTrans.css";
-import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap'
+import { 
+  // Button, 
+  Navbar, Nav, 
+  // NavDropdown, Form, FormControl 
+} from 'react-bootstrap'
 
 const NavBarTrans = props => (
 
