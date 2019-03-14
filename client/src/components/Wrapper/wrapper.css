@@ -7,8 +7,8 @@
     margin-bottom: 20px;
     justify-content: space-around;
     align-content: flex-start;
-    overflow: auto;
-    font-family: 'Varela Round', sans-serif;
+    /* overflow: auto; */
+    font-family: 'Roboto', sans-serif;
     color: black !important;
 }
 

@@ -86,7 +86,7 @@ class Sites extends Component {
         <Row>
           <Col size="md-6">
             
-              <h1>Search for SANE Locations?</h1>
+              <h1>Locations nearby</h1>
             
             <SimpleMap 
               center={this.state.userLocation}
@@ -96,6 +96,7 @@ class Sites extends Component {
             />
             <br>
             </br>
+            <h1>Search for a site</h1>
             <form>
               <Input
                 value={this.state.city}
@@ -118,7 +119,7 @@ class Sites extends Component {
           </Col>
           <Col size="md-6 sm-12">
             
-              <h1>SANE Locations</h1>
+              <h1>All SANE Locations</h1>
             
             {this.state.sites.length ? (
               <List>
