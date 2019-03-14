@@ -47,9 +47,10 @@ class Sites extends Component {
 
   loadSites = () => {
     API.getSites()
-      .then(res =>
+      .then(res => {
+        console.log("load sites data", res);
         this.setState({ sites: res.data, city: "", county: "" })
-      )
+      })
       .catch(err => console.log(err));
   };
 
@@ -125,7 +126,7 @@ class Sites extends Component {
                   <ListItem key={site._id}>
                     <Link to={"/sites/" + site._id}>
                       <strong id="siteText">
-                        {site.facility} by {site.city} in {site.county} County
+                        {site.Facility} by {site.City} in {site.County} County
                       </strong>
                     </Link>
                   </ListItem>
