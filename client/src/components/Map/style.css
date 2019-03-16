@@ -4,6 +4,7 @@
   border-radius: 50% 50% 50% 0;
   background: #3d10e0;
   position: absolute;
+  cursor: pointer;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);

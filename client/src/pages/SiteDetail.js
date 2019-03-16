@@ -16,7 +16,7 @@ class SiteDetails extends Component {
     API.findSite(this.props.match.params.id)
       .then(res => {
         console.log(res.data)
-        siteCenter = {
+        let siteCenter = {
           lat: res.data.Latitude,
           lng: res.data.Longitude
         }
@@ -33,6 +33,10 @@ class SiteDetails extends Component {
               <h1>
                 {this.state.site.City} by {this.state.site.Facility} {this.state.site.County}
               </h1>
+              <SimpleMap 
+                center={this.state.center}
+                sites={this.state.site}
+              />
             </Jumbotron>
           </Col>
         </Row>
