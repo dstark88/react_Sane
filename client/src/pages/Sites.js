@@ -77,7 +77,13 @@ class Sites extends Component {
         county: this.state.county,
         facility: this.state.facility,
       })
-        .then(res => this.setState({ sites: res.data, county: "", city: "", facility: ""}))
+        .then(res => {
+          let newCenter = {
+            lat: res.data[0].Latitude,
+            lng: res.data[0].Longitude
+          }
+          this.setState({ sites: res.data, userLocation: newCenter, county: "", city: "", facility: "" })
+        })
         .catch(err => console.log(err));
     }
   };
@@ -92,8 +98,6 @@ class Sites extends Component {
             </center>
             <SimpleMap
               center={this.state.userLocation}
-              lat={this.state.userLocation.lat}
-              lng={this.state.userLocation.lng}
               sites={this.state.sites}
             />
             <br>
