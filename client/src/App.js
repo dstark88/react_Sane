@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Wiz from "./pages/Wiz";
 import Sites from "./pages/Sites";
-import Detail from "./pages/Detail";
+import SiteDetail from "./pages/SiteDetail";
 // import Users from "./pages/Users";
 import NoMatch from "./pages/NoMatch";
 import About from "./pages/About";
@@ -37,7 +37,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/wiz" component={Wiz} />
               <Route exact path="/sites" component={Sites} />
-              <Route exact path="/sites/:id" component={Detail} />
+              <Route exact path="/sites/:id" component={SiteDetail} />
               <Route exact path="/about" component={About} />
               <Route exact path="/call" component={Call} />
               <Route exact path="/sanep" component={SaneP} />

@@ -9,6 +9,11 @@ export default {
   findSites: function(siteInfo) {
     return axios.post("/api/sites/", siteInfo);
   },
+
+  findSite: function(id) {
+    return axios.get("/api/sites/" + id);
+  },
+
   // Deletes with the given id
   deleteSite: function(id) {
     return axios.delete("/api/sites/" + id);
