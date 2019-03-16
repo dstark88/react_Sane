@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Wiz from "./pages/Wiz";
 import Sites from "./pages/Sites";
 import Detail from "./pages/Detail";
-// import Users from "./pages/Users";
 import NoMatch from "./pages/NoMatch";
 import About from "./pages/About";
 import Call from "./pages/Call";
@@ -15,9 +14,7 @@ import AddStories from "./pages/AddStories";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarTrans from "./components/NavBar/NavBarTrans";
-import UserCard from "./components/UserCard";
 import Wrapper from "./components/Wrapper";
-// import Title from "./components/Title";
 import Footer from "./components/Footer";
 // import Form from "./components/Form";  
 
@@ -30,8 +27,6 @@ class App extends Component {
       <div>
         <NavBarTrans />
         <Wrapper> 
-          {/* <Title /> */}
-
           <Router>
             <Switch>
               <Route exact path="/" component={Home} />
@@ -47,14 +42,8 @@ class App extends Component {
               <Route component={NoMatch} />
             </Switch>
           </Router>
-
-          <UserCard>
-       
-          </UserCard>
-
         </Wrapper>
-        <Footer />
-          
+        <Footer />         
       </div>
     );
   }
