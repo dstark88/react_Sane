@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 
+
 class Posts extends Component {
   state = {
     posts: [],

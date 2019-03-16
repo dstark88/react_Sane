@@ -3,6 +3,7 @@ import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
+import Footer from "../components/Footer";
 
 class Users extends Component {
   state = {
@@ -64,6 +65,7 @@ class Users extends Component {
             </form>
           </Col>
         </Row>
+        <Footer />
       </Container>
     );
   }
