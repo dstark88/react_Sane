@@ -116,8 +116,7 @@ export default class Login extends Component {
                                 className="btn btn-primary mt-2" 
                                 value="Sign Up!" >
                                 <Link className="nav-link" to="#">Submit</Link>
-                            </button>
-                                
+                            </button>       
                             <button 
                                 className="btn btn-info" 
                                 onClick={this.signIn}>
@@ -127,9 +126,6 @@ export default class Login extends Component {
                     </div>
                 </form>
             </ Authcard>
-
         )
     }
-
-
 }

@@ -82,6 +82,10 @@ class Sites extends Component {
     }
   };
 
+  showDiv = event => {
+    document.getElementById("hiddenDiv").style.display="block" 
+  }
+
   render() {
     return (
       <Container fluid>
@@ -152,6 +156,14 @@ class Sites extends Component {
                         <strong>{site.Facility}</strong> by {site.City} in {site.County} County
                       </span>
                     </Link>
+                    <p onClick={this.showDiv}>
+                    see more
+                    </p>
+              
+                    <div style="display:none"
+                      id="hiddenDiv">
+                      {site.country} Web Site {site.web_address} 
+                    </div>
                   </ListItem>
                 ))}
               </List>
