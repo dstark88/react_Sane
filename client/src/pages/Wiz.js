@@ -5,10 +5,7 @@ import Jumbotron from "../components/Jumbotron";
 import { Wizard, Steps } from 'react-albus';
 import { StepOne } from '../components/Wizard/StepOne';
 import { StepTwo } from '../components/Wizard/StepTwo';
-// import { StepThree } from '../components/Wizard/StepThree';
 import { Navigation } from '../components/Wizard/Navigation';
-
-// import Sites from "../pages/Sites";
 
 function NoMatch() {
   return (
@@ -20,7 +17,6 @@ function NoMatch() {
               <Steps>
                 <StepOne id="safe" />
                 <StepTwo id="age" />
-                {/* <StepThree id="locations" /> */}
               </Steps>
               <Navigation />
             </Wizard>
