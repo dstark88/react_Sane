@@ -34,9 +34,7 @@ class Posts extends Component {
           <Col size="md-8">
             <center>
               <h1 id="mainHeader">Stories</h1>
-
             </center>
-
             {this.state.posts.length ? (
               <List>
                 {this.state.posts.map(post => (

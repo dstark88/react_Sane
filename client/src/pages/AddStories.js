@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-// import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Posts extends Component {
@@ -26,12 +25,6 @@ class Posts extends Component {
       .catch(err => console.log(err));
   };
 
-  // deletePost = id => {
-  //   API.deletePost(id)
-  //     .then(res => this.loadPosts())
-  //     .catch(err => console.log(err));
-  // };
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -41,7 +34,6 @@ class Posts extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log("handleFormSubmit hit");
     if (this.state.title && this.state.author && this.state.story) {
       API.savePost({
         title: this.state.title,

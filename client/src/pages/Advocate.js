@@ -9,7 +9,7 @@ function SaneP() {
       <Row>
         <Col size="md-12">
           <Jumbotron>
-            <h1>This is our page for an advocate listing</h1>
+            <h1>Advocates</h1>
           </Jumbotron>
         </Col>
       </Row>
