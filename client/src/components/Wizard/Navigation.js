@@ -26,7 +26,7 @@ export const Navigation = () => (
                 <Link className="nav-link"  to="/Sites">Yes</Link>
             </button>
             <button className="btn-fluid btn-no" onClick={no}>
-              <Link className="nav-link" to="/SaneP">No</Link>
+              <Link className="nav-link" to="/Advocate">No</Link>
             </button>
             <button className="btn-fluid btn-secondary" onClick={previous}>
               <Link className="nav-link"  to="/">Home</Link>
