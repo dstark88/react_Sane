@@ -1,25 +1,32 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Varela Round', sans-serif;
   background-image: url ("/assets/images/AdobeStock_103776774.jpeg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 h1, h3 {
   color: white;
   margin-bottom: 5%;
   font-weight: lighter;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Fredericka the Great', cursive;
 }
 
+#mainHeader {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 100px;
+}
 
-
+#mainInfo {
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 24px;
+}
 
 
 

@@ -9,8 +9,8 @@ function Home() {
       <Row>
         <Col size="md-12">
           <Jumbotron>
-            <h1>Project S.A.N.E.</h1>
-            <p>vnaiovnaoinva qacenai aoinciuvb o  aoinsdopi a a uibvpiob aio aknvcai aoib iopvb a aob a aosi.</p>
+            <h1 id="mainHeader">Project S.A.N.E.</h1>
+            <p id="mainInfo">Cat ipsum dolor sit amet, slap kitten brother with paw but run at 3am. Meow loudly just to annoy owners. Eats owners hair then claws head. Bleghbleghvomit my furball really tie the room together prance along on top of the garden fence, annoy the neighbor's dog and make it bark.</p>
             <button><Link className="nav-link" to="/Wiz">SANE Locator</Link></button>
           </Jumbotron>
         </Col>

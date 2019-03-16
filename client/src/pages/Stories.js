@@ -20,7 +20,8 @@ class Posts extends Component {
     API.getPosts()
       .then(res => {
         console.log(res, "res in loadpost");
-        this.setState({ posts: res.data, title: "", author: "", story: "" })}
+        this.setState({ posts: res.data, title: "", author: "", story: "" })
+      }
       )
       .catch(err => console.log(err));
   };
@@ -32,8 +33,8 @@ class Posts extends Component {
           <Col size="md-2" />
           <Col size="md-8">
             <center>
-              <h1>Stories</h1>
-              <button><Link className="nav-link" to="/Login">Add Your Story</Link></button>
+              <h1 id="mainHeader">Stories</h1>
+
             </center>
 
             {this.state.posts.length ? (
@@ -42,7 +43,7 @@ class Posts extends Component {
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong id="storyText">
-                        {post.title} by {post.author} 
+                        {post.title} by {post.author}
                       </strong>
                       <br></br>
                       <strong id="storyText">
@@ -53,10 +54,15 @@ class Posts extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
           </Col>
         </Row>
+        <br>
+        </br>
+        <center>
+          <button><Link className="nav-link" to="/Login">Add Your Story</Link></button>
+        </center>
       </Container>
     );
   }

@@ -15,7 +15,7 @@ class Sites extends Component {
     state: "",
     county: "",
     city: "",
-    facility: "", 
+    facility: "",
     lat: null,
     lng: null,
     // phone_1,
@@ -30,23 +30,23 @@ class Sites extends Component {
     this.loadSites();
     this.getLocation();
     API.getSites()
-    .then(res => console.log(res.data, "res.data")
-      // this.setState({ sites: res.data })
-    )
-    .catch(err => console.log(err));
+      .then(res => console.log(res.data, "res.data")
+        // this.setState({ sites: res.data })
+      )
+      .catch(err => console.log(err));
   }
 
   getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.handleUserLocation);
-    } else { 
+    } else {
       console.log("Geolocation is not supported by this browser.");
     }
   }
-  
+
   handleUserLocation = (position) => {
     console.log(position)
-    this.setState({ userLocation: {lat: position.coords.latitude, lng: position.coords.longitude} })
+    this.setState({ userLocation: { lat: position.coords.latitude, lng: position.coords.longitude } })
     console.log(this.state);
   }
 
@@ -87,16 +87,19 @@ class Sites extends Component {
         <Row>
           <Col size="md-6">
             <center>
-              <h1>Search for SANE Locations</h1>
+              <h1>SANE Locations Nearby</h1>
             </center>
-            <SimpleMap 
+            <SimpleMap
               center={this.state.userLocation}
               lat={this.state.userLocation.lat}
               lng={this.state.userLocation.lng}
               sites={this.state.sites}
             />
-
-            <h3>Search by one of the options below.</h3>
+            <br>
+            </br>
+            <center>
+              <h1>Search using one of the options below:</h1>
+            </center>
             <form>
               <Input
                 list="city"
@@ -144,16 +147,16 @@ class Sites extends Component {
                 {this.state.sites.map(site => (
                   <ListItem key={site._id}>
                     <Link to={"/sites/" + site._id}>
-                      <strong id="siteText">
-                        {site.Facility} by {site.City} in {site.County} County
-                      </strong>
+                      <span id="siteText">
+                        <strong>{site.Facility}</strong> by {site.City} in {site.County} County
+                      </span>
                     </Link>
                   </ListItem>
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
           </Col>
         </Row>
       </Container>

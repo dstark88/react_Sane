@@ -6,50 +6,49 @@
     background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
     background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
     background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-    font-family: 'Roboto', sans-serif;
+    
 }
 
 .navbar-light .navbar-brand {
     color: white;
     font-weight: lighter;
-    font-family: 'Roboto', sans-serif;
     
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: white;
     font-weight: lighter;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
 
 }
 
 button {
     border: 2px solid teal;
-    background-color: rgba(0,0,0,0.0);
-    color: black;
+    background-color: teal;
+    color: white;
     padding: 5px 14px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    box-shadow: 3px 3px 10px black;
 }
 
 .nav-link {
     color: white;
     font-weight: lighter;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 a{
     color: white !important;
     text-decoration:none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-weight: lighter;
+    font-size: 24px;
 }
 
 a:hover{
-    /* -webkit-stroke-width: 5.3px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF; */
     text-shadow: 1px 0px 20px  rgb(169, 205, 201);
 }
 
