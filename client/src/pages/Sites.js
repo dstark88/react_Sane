@@ -76,7 +76,13 @@ class Sites extends Component {
         county: this.state.county,
         facility: this.state.facility,
       })
-        .then(res => this.setState({ sites: res.data }))
+        .then(res => {
+          let newCenter = {
+            lat: res.data[0].Latitude,
+            lng: res.data[0].Longitude
+          }
+          this.setState({ sites: res.data, userLocation: newCenter })
+        })
         .catch(err => console.log(err));
     }
   };
