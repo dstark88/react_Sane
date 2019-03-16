@@ -23,10 +23,10 @@ export const Navigation = () => (
         {steps.indexOf(step) > 0 && (
           <>
             <button>
-                <Link className="nav-link"  to="/Sites">Yes</Link>
+                <Link className="nav-link"  to="/Sites">SANE Locations</Link>
             </button>
             <button className="btn-fluid btn-no" onClick={no}>
-              <Link className="nav-link" to="/Advocate">No</Link>
+              <Link className="nav-link" to="/Advocate">Advocate Resources</Link>
             </button>
             <button className="btn-fluid btn-secondary" onClick={previous}>
               <Link className="nav-link"  to="/">Home</Link>

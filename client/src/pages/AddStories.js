@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import API from "../utils/API";
-// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
@@ -41,7 +41,6 @@ class Posts extends Component {
         story: this.state.story
       })
         .then(res => {
-          console.log(res, "res in handle");
         this.loadPosts({ posts: res.data })})
         .catch(err => console.log(err));
     }
@@ -50,6 +49,13 @@ class Posts extends Component {
   render() {
     return (
       <Container fluid>
+        <div>
+          <button>
+              {!!this.state.loggedInUser || !!this.state.session ? (<a onClick={this.signOutClick}></a>)
+              : null}
+              <Link to="/Login">Sign Out</Link>
+          </button>
+        </div>
         <Row>
           <Col size="md-12">
             <center>
