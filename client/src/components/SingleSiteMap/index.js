@@ -7,7 +7,7 @@ const MapMarker = () => (
   </div>
 );
 
-class MultipleSitesMap extends Component {
+class SingleSiteMap extends Component {
 
   render() {
     // console.log(this.props.sites);
@@ -19,19 +19,14 @@ class MultipleSitesMap extends Component {
           center={this.props.center}
           zoom={10}
         >
-
-          {this.props.sites.map(sites => (
-            <MapMarker
-              key={sites.Latitude}
-              lat={sites.Latitude}
-              lng={sites.Longitude}
-            />
-          ))}
-
+          <MapMarker
+            lat={this.props.sites.Latitude}
+            lng={this.props.sites.Longitude}
+          />
         </GoogleMapReact>
       </div>
     );
   }
 }
 
-export default MultipleSitesMap;
+export default SingleSiteMap;

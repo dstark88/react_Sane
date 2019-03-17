@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
-import SimpleMap from "../components/Map";
+import MultipleSitesMap from "../components/Map";
 // import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -96,7 +96,7 @@ class Sites extends Component {
             <center>
               <h1>SANE Locations Nearby</h1>
             </center>
-            <SimpleMap
+            <MultipleSitesMap
               center={this.state.userLocation}
               sites={this.state.sites}
             />
