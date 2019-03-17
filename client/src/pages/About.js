@@ -39,7 +39,7 @@ function About() {
                             <h2><strong>View Our Portfolios:</strong></h2>
 
                             <a href="https://dstark88.github.io/portfolio/" target="blank"><h4>Denise Stark</h4></a>
-                            <a href="https://tinali91.github.io/portfolio/" target="blank"><h4>Tina Li</h4></a>
+                            <a href="https://github.com/tinali91/updatedPortfolio" target="blank"><h4>Tina Li</h4></a>
                             <a href="https://brookj1.github.io/jbrooksportfolio/" target="blank"><h4>Jamie Brooks</h4></a>
                             <a href="https://gingerkrc.github.io/updated-portfolio/" target="blank"><h4>Ginger Conly</h4></a>
 
