@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url ("/assets/images/AdobeStock_103776774.jpeg");
+  background-image: url ("AdobeStock_103776774.jpeg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
