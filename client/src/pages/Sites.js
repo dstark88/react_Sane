@@ -19,7 +19,7 @@ class Sites extends Component {
     facility: "",
     lat: null,
     lng: null,
-    // phone_1,
+    phone: "",
     web_address: "",
     userLocation: {
       lat: null,
@@ -153,9 +153,18 @@ class Sites extends Component {
                   <ListItem key={site._id}>
                     <Link to={"/sites/" + site._id}>
                       <span id="siteText">
-                        <strong>{site.Facility}</strong> by {site.City} in {site.County} County
+                        <strong>{site.Facility}</strong> in {site.City} in {site.County} County
+                        <br></br>
+                        Phone Number {site["Phone 1"]}
                       </span>
                     </Link>
+                    <div>
+                    <a href={"" + site["Web Address"]} target="blank">
+                      <span id="siteText">
+                        Web Site {site["Web Address"]}
+                      </span>
+                    </a>
+                    </div>
                   </ListItem>
                 ))}
               </List>
