@@ -9,7 +9,7 @@ function Call() {
       <Row>
         <Col size="md-12">
           <Jumbotron>
-            <h1>This is our Call 911 when not in a safe place page</h1>
+            <h1>If you are injured or need immediate assitance dial 9-1-1.</h1>
           </Jumbotron>
         </Col>
       </Row>

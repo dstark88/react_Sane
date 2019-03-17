@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Call from "./pages/Call";
 import Advocate from "./pages/Advocate";
 import Stories from "./pages/Stories";
+import StoryDetail from "./pages/StoryDetail";
 import Login from "./pages/Login";
 import AddStories from "./pages/AddStories";
 
@@ -34,6 +35,7 @@ class App extends Component {
               <Route exact path="/call" component={Call} />
               <Route exact path="/advocate" component={Advocate} />
               <Route exact path="/stories" component={Stories} />
+              <Route exact path="/posts/:id" component={StoryDetail} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/addStories" component={AddStories} />
               <Route component={NoMatch} />
