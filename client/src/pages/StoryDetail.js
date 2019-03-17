@@ -22,7 +22,9 @@ class StoryDetail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-               {this.state.post.title}, written by {this.state.post.author} 
+               {this.state.post.title},
+               <br></br>
+               by {this.state.post.author} 
               </h1>
             </Jumbotron>
           </Col>

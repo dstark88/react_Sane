@@ -44,13 +44,18 @@ class Posts extends Component {
                 {this.state.posts.map(post => (
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
-                      <strong id="storyText">
-                        {post.title}, written by {post.author}
+                      <h3><strong id="storyText">
+                      <center>
+                        {post.title},
+                        <br></br> 
+                        by {post.author}
+                        </center>
                       </strong>
-                      <br></br>
-                      <strong id="storyText">
+                      </h3>
+                      <h4><strong id="storyText">
                         {post.story.slice(0,250)}...read more
                       </strong>
+                      </h4>
                     </Link>
                   </ListItem>
                 ))}
