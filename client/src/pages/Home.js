@@ -10,7 +10,7 @@ function Home() {
         <Col size="md-12">
           <Jumbotron>
             <h1 id="mainHeader">Project S.A.N.E.</h1>
-            <p id="mainInfo">Cat ipsum dolor sit amet, slap kitten brother with paw but run at 3am. Meow loudly just to annoy owners. Eats owners hair then claws head. Bleghbleghvomit my furball really tie the room together prance along on top of the garden fence, annoy the neighbor's dog and make it bark.</p>
+            <p id="mainInfo">Search for a Sexual Assaunt Nurse Examiner (S.A.N.E.) in the Rocky Mountain Region.</p>
             <button><Link className="nav-link" to="/Wiz">SANE Locator</Link></button>
           </Jumbotron>
         </Col>
