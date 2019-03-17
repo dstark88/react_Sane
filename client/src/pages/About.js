@@ -37,19 +37,23 @@ function About() {
                     <Row>
                         <Col size="md-12">
                             <h2><strong>View Our Portfolios:</strong></h2>
+
                             <a href="https://dstark88.github.io/portfolio/" target="blank"><h4>Denise Stark</h4></a>
                             <a href="https://tinali91.github.io/portfolio/" target="blank"><h4>Tina Li</h4></a>
                             <a href="https://brookj1.github.io/jbrooksportfolio/" target="blank"><h4>Jamie Brooks</h4></a>
                             <a href="https://gingerkrc.github.io/updated-portfolio/" target="blank"><h4>Ginger Conly</h4></a>
+
                         </Col>
                         <Col size="md-12">
                             <br></br>
                             <br></br>
                             <h2><strong>Connect on LinkedIn:</strong></h2>
+
                             <a href="https://www.linkedin.com/in/denise-stark-a9387516a/" target="blank"><h4>Denise Stark</h4></a>
                             <a href="https://www.linkedin.com/in/tinacli/" target="blank"><h4>Tina Li</h4></a>
                             <a href="https://www.linkedin.com/in/jamie-brooks-00172321/" target="blank"><h4>Jamie Brooks</h4></a>
                             <a href="https://www.linkedin.com/in/ginger-conly/" target="blank"><h4>Ginger Conly</h4></a>
+
                         </Col>
                     </Row>
                 </Col>

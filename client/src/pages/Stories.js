@@ -35,6 +35,7 @@ class Posts extends Component {
             <center>
               <h1 id="mainHeader">Stories</h1>
               <h3 id="mainText">Please share your story with others. Your identity will remain anonymous unless you choose to share it.</h3>
+
             </center>
             <center>
               <button><Link className="nav-link" to="/Login">Add Your Story</Link></button>
