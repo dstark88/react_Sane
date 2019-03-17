@@ -34,6 +34,7 @@ class Posts extends Component {
           <Col size="md-8">
             <center>
               <h1 id="mainHeader">Stories</h1>
+              <h3 id="mainText">Please share your story with others. Your identity will remain anonymous unless you choose to share it.</h3>
             </center>
             <center>
               <button><Link className="nav-link" to="/Login">Add Your Story</Link></button>
@@ -43,13 +44,18 @@ class Posts extends Component {
                 {this.state.posts.map(post => (
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
-                      <strong id="storyText">
-                        {post.title} by {post.author}
+                      <h3><strong id="storyText">
+                      <center>
+                        {post.title},
+                        <br></br> 
+                        by {post.author}
+                        </center>
                       </strong>
-                      <br></br>
-                      <strong id="storyText">
-                        {post.story}
+                      </h3>
+                      <h4><strong id="storyText">
+                        {post.story.slice(0,250)}...read more
                       </strong>
+                      </h4>
                     </Link>
                   </ListItem>
                 ))}
