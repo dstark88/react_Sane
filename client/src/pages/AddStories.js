@@ -60,7 +60,7 @@ class Posts extends Component {
           <Col size="md-12">
             <center>
               <h1>Add your story</h1>
-              <h3>Please share your story with others.</h3>
+              <h3>Please share your story with others. Your identity will remain anonymous unless you choose to share it.</h3>
             </center>
             <form>
               <Input

@@ -31,9 +31,9 @@ class StoryDetail extends Component {
           <Col size="md-1"></Col>
           <Col size="md-10">
               <h3>
-              <strong>
+              <center>
                 {this.state.post.story}
-              </strong>
+              </center>
               </h3>      
           </Col>
         </Row>

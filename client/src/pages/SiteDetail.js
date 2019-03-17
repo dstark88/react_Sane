@@ -27,31 +27,63 @@ class SiteDetails extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
+          <Col size="md-6">
             <Jumbotron>
               <h1>
-                {this.state.site.City} by {this.state.site.Facility} {this.state.site.County}
+                SANE Site Map
               </h1>
+            </Jumbotron>
               <SimpleMap 
                 center={this.state.center}
                 sites={this.state.site}
               />
-            </Jumbotron>
           </Col>
-        </Row>
-        <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Details</h1>
-              <p>
-                {this.state.site["Additional Information"]}
-              </p>
-            </article>
+          <Col size="md-6">
+            <Jumbotron>
+              <h1>{this.state.site.Facility}</h1>
+            </Jumbotron>
+              <h3>
+                <center>
+
+                {this.state.site.Address}
+                <br></br>
+                {this.state.site.City}, {""}
+                {this.state.site.State} {""}
+                {this.state.site.Zip}
+                <br></br>
+                in {this.state.site.County} County
+                <br></br>
+                {this.state.site["Phone 1"]}
+                <br></br>
+                <br></br>
+                <div>
+                    <a href={"" + this.state.site.Address} target="blank">
+                      <h3>
+                        Get Directions
+                      </h3>
+                    </a>
+                </div>
+                <div>
+                    <a href={"" + this.state.site["Web Address"]} target="blank">
+                        <h3>
+                        Web Site:
+                        <br></br>
+                        {this.state.site["Web Address"]}
+                        </h3>
+                    </a>
+                </div>
+                  Additional Information:
+                  <br></br>
+                  {this.state.site["Additional Information"]}
+                  </center>
+              </h3>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
+            <button>
             <Link to="/sites">← Back to Locations</Link>
+            </button>
           </Col>
         </Row>
       </Container>
