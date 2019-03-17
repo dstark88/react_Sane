@@ -35,6 +35,9 @@ class Posts extends Component {
             <center>
               <h1 id="mainHeader">Stories</h1>
             </center>
+            <center>
+              <button><Link className="nav-link" to="/Login">Add Your Story</Link></button>
+            </center>
             {this.state.posts.length ? (
               <List>
                 {this.state.posts.map(post => (
@@ -56,11 +59,7 @@ class Posts extends Component {
               )}
           </Col>
         </Row>
-        <br>
-        </br>
-        <center>
-          <button><Link className="nav-link" to="/Login">Add Your Story</Link></button>
-        </center>
+
       </Container>
     );
   }

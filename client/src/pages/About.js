@@ -7,31 +7,31 @@ function About() {
   return (
     <div class="container">
     <div class="row">
-        <div class="col l6 s12">
-            <h5 class="white-text">Project Bio</h5>
-            <p class="grey-text text-lighten-4">We are a team of students in the University of Denver's Women's
+        <div class="col l8 s12">
+            <h5 id="mainInfo">Project Bio</h5>
+            <p id="mainText">We are a team of students in the University of Denver's Women's
                 Full Stack Web Development Bootcamp. We are passionate about coding and advocating. Our goal
                 with
                 this project is to improve our development skills while providing a platform for important
                 information
                 and tools for sexual assault victims and advocates. </p>
         </div>
-        <div class="col l3 s12">
-            <h5 class="white-text">View Our Portfolios:</h5>
+        <div class="col l2 s12">
+            <h5 id="mainInfo">View Our Portfolios:</h5>
             <ul>
-                <li><a class="white-text" href="https://brookj1.github.io/jbrooksportfolio/">Jamie Brooks</a></li>
-                <li><a class="white-text" href="https://gingerkrc.github.io/updated-portfolio/">Ginger Conly</a></li>
-                <li><a class="white-text" href="https://tinali91.github.io/portfolio/">Tina Li</a></li>
-                <li><a class="white-text" href="https://dstark88.github.io/Portfolio/">Denise Stark</a></li>
+                <li><a id="mainText" href="https://brookj1.github.io/jbrooksportfolio/">Jamie Brooks</a></li>
+                <li><a id="mainText" href="https://gingerkrc.github.io/updated-portfolio/">Ginger Conly</a></li>
+                <li><a id="mainText" href="https://tinali91.github.io/portfolio/">Tina Li</a></li>
+                <li><a id="mainText" href="https://dstark88.github.io/Portfolio/">Denise Stark</a></li>
             </ul>
         </div>
-        <div class="col l3 s12">
-            <h5 class="white-text">Connect on LinkedIn:</h5>
+        <div class="col l2 s12">
+            <h5 id="mainInfo">Connect on LinkedIn:</h5>
             <ul>
-                <li><a class="white-text" href="https://www.linkedin.com/in/jamie-brooks-00172321/">Jamie Brooks</a></li>
-                <li><a class="white-text" href="https://www.linkedin.com/in/ginger-conly/">Ginger Conly</a></li>
-                <li><a class="white-text" href="https://www.linkedin.com/in/tinacli/">Tina Li</a></li>
-                <li><a class="white-text" href="https://www.linkedin.com/in/denise-stark-a9387516a/">Denise Stark</a></li>
+                <li><a id="mainText" href="https://www.linkedin.com/in/jamie-brooks-00172321/">Jamie Brooks</a></li>
+                <li><a id="mainText" href="https://www.linkedin.com/in/ginger-conly/">Ginger Conly</a></li>
+                <li><a id="mainText" href="https://www.linkedin.com/in/tinacli/">Tina Li</a></li>
+                <li><a id="mainText" href="https://www.linkedin.com/in/denise-stark-a9387516a/">Denise Stark</a></li>
             </ul>
         </div>
     </div>
