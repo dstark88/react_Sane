@@ -44,11 +44,11 @@ class Posts extends Component {
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong id="storyText">
-                        {post.title} by {post.author}
+                        {post.title}, written by {post.author}
                       </strong>
                       <br></br>
                       <strong id="storyText">
-                        {post.story}
+                        {post.story.slice(0,250)}...read more
                       </strong>
                     </Link>
                   </ListItem>

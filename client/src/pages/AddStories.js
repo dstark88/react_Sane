@@ -84,7 +84,7 @@ class Posts extends Component {
               <FormBtn
                 onClick={this.handleFormSubmit}
               >
-                Submit
+                <Link to="/Stories">Submit</Link>
               </FormBtn>
             </form>
           </Col>
