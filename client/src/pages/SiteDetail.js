@@ -16,9 +16,10 @@ class SiteDetails extends Component {
       .then(res => {
         console.log(res.data)
         let siteCenter = {
-          lat: res.data.Latitude,
-          lng: res.data.Longitude
+          lat: res.data.latitude,
+          lng: res.data.longitude
         }
+        console.log(siteCenter)
         this.setState({ site: res.data, center: siteCenter })})
       .catch(err => console.log(err));
   }
@@ -40,41 +41,41 @@ class SiteDetails extends Component {
           </Col>
           <Col size="md-6">
             <Jumbotron>
-              <h1>{this.state.site.Facility}</h1>
+              <h1>{this.state.site.facility}</h1>
             </Jumbotron>
               <h3>
                 <center>
 
-                {this.state.site.Address}
+                {this.state.site.address}
                 <br></br>
-                {this.state.site.City}, {""}
-                {this.state.site.State} {""}
-                {this.state.site.Zip}
+                {this.state.site.city}, {""}
+                {this.state.site.state} {""}
+                {this.state.site.zip}
                 <br></br>
-                in {this.state.site.County} County
+                in {this.state.site.county} county
                 <br></br>
-                {this.state.site["Phone 1"]}
+                {this.state.site.phone_1}
                 <br></br>
                 <br></br>
                 <div>
-                    <a href={"https://www.google.com/maps/dir/?api=1&destination=" + this.state.site.Latitude + "," + this.state.site.Longitude} target="blank">
+                    <a href={"https://www.google.com/maps/dir/?api=1&destination=" + this.state.site.latitude + "," + this.state.site.longitude} target="blank">
                       <h3>
                         Get Directions
                       </h3>
                     </a>
                 </div>
                 <div>
-                    <a href={"" + this.state.site["Web Address"]} target="blank">
+                    <a href={"" + this.state.site.web_address} target="blank">
                         <h3>
                         Web Site:
                         <br></br>
-                        {this.state.site["Web Address"]}
+                        {this.state.site.web_address}
                         </h3>
                     </a>
                 </div>
                   Additional Information:
                   <br></br>
-                  {this.state.site["Additional Information"]}
+                  {this.state.site.additional_info}
                   </center>
               </h3>
           </Col>
