@@ -17,7 +17,6 @@ import AddStories from "./pages/AddStories";
 import NavBarTrans from "./components/NavBar/NavBarTrans";
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
-  
 
 class App extends Component {
   render() {

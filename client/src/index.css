@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: grey;
+  background-image: url("./adobemountains.jpg");
+  /* background: grey; */
   /* background-image: url ("/adobemountains.jpeg")!important; */
   background-size: cover;
   background-attachment: fixed;
