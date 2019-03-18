@@ -115,7 +115,7 @@ export default class Login extends Component {
                                 type="submit" 
                                 className="btn btn-primary mt-2" 
                                 value="Sign Up!" >
-                                <Link className="nav-link" to="#">Submit</Link>
+                                <Link className="nav-link" to="/Login">Submit</Link>
                             </button>       
                             <button 
                                 className="btn btn-info" 
