@@ -13,30 +13,41 @@ body {
   /* opacity: 0.4; */
 }
  
-h1, h2, h3, h4 {
+h1, h2 {
   color: white;
   margin-bottom: 5%;
   font-weight: lighter;
   font-family: 'Fredericka the Great', cursive;
 }
 
+h1 {
+  font-size: 45px;
+}
+
+h3{
+  color: white;
+  font-weight: lighter;
+  font-family: 'Fredericka the Great', cursive;
+}
+
 #mainHeader {
   font-family: 'Fredericka the Great', cursive;
-  font-size: 100px;
+  font-size: 83px;
 }
 
 #mainInfo {
   color: white;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 24px;
-
+  font-size: 30px;
 }
 
 #mainText {
   color: white;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
-
+}
+#storyText {
+  color: black;
 }
 
 

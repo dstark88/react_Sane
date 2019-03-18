@@ -22,7 +22,7 @@ export const Navigation = () => (
 
         {steps.indexOf(step) > 0 && (
           <>
-            <button>
+            <button className="btn-fluid">
                 <Link className="nav-link"  to="/Sites">SANE Locations</Link>
             </button>
             <button className="btn-fluid btn-no" onClick={no}>
