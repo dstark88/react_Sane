@@ -30,8 +30,8 @@ class Posts extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-2" />
-          <Col size="md-8">
+          <Col size="md-1" />
+          <Col size="md-10">
             <center>
               <h1 id="mainHeader">Stories</h1>
               <p id="mainInfo">Please share your story with others. Your identity will remain anonymous unless you choose to share it.</p>

@@ -88,12 +88,10 @@ export default class UserLogin extends Component{
                         <div className="col-md-12 text-center mb-1">
                             <button 
                                 type="submit" 
-                                className="btn btn-primary" 
                                 value="Submit">
                                 <Link className="nav-link" to="/AddStories">Submit</Link>
                             </button>
                             <button 
-                                className="btn btn-info" 
                                 onClick={this.onNewUserClick}>
                                 <Link className="nav-link" to="/Login">Sign Up!</Link>
                             </button> 

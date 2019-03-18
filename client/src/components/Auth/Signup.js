@@ -114,12 +114,10 @@ export default class Login extends Component {
                             <button 
                                 onClick={this.signIn}
                                 type="submit" 
-                                className="btn btn-primary mt-2" 
                                 value="Sign Up!" >
                                 <Link className="nav-link" to="/Login">Submit</Link>
                             </button>       
                             <button 
-                                className="btn btn-info" 
                                 onClick={this.signIn}>
                                 <Link className="nav-link" to="/Login">Sign In!</Link>
                             </button>

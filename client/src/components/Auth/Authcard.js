@@ -10,11 +10,11 @@ return (
                 <strong> {props.title} </strong>
             </h1>
         </div>
+    </div>
+        <div className="login-group row">
+            {props.children}        
         </div>
-            <div className="login-group row">
-                {props.children}        
-            </div>
-        </div>
+    </div>
 )
 }
 
