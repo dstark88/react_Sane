@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import SimpleMap from "../components/Map";
+import SingleSiteMap from "../components/SingleSiteMap";
 
 class SiteDetails extends Component {
   state = {
@@ -33,7 +33,7 @@ class SiteDetails extends Component {
                 SANE Site Map
               </h1>
             </Jumbotron>
-              <SimpleMap 
+              <SingleSiteMap 
                 center={this.state.center}
                 sites={this.state.site}
               />
@@ -57,7 +57,7 @@ class SiteDetails extends Component {
                 <br></br>
                 <br></br>
                 <div>
-                    <a href={"" + this.state.site.Address} target="blank">
+                    <a href={"https://www.google.com/maps/dir/?api=1&destination=" + this.state.site.Latitude + "," + this.state.site.Longitude} target="blank">
                       <h3>
                         Get Directions
                       </h3>
