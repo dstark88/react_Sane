@@ -20,8 +20,8 @@ class SingleSiteMap extends Component {
           zoom={10}
         >
           <MapMarker
-            lat={this.props.sites.Latitude}
-            lng={this.props.sites.Longitude}
+            lat={this.props.sites.latitude}
+            lng={this.props.sites.longitude}
           />
         </GoogleMapReact>
       </div>
