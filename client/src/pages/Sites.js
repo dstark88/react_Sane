@@ -79,8 +79,8 @@ class Sites extends Component {
       })
         .then(res => {
           let newCenter = {
-            lat: res.data[0].Latitude,
-            lng: res.data[0].Longitude
+            lat: res.data[0].latitude,
+            lng: res.data[0].longitude
           }
           this.setState({ sites: res.data, userLocation: newCenter, county: "", city: "", facility: "" })
         })
@@ -114,7 +114,7 @@ class Sites extends Component {
                 placeholder="City (Optional)"
               />
               <datalist id="city">
-                {this.state.sitesList.map(site => <option key={site._id}>{site.City}</option>)}
+                {this.state.sitesList.map(site => <option key={site._id}>{site.city}</option>)}
               </datalist>
               <Input
                 list="county"
@@ -124,7 +124,7 @@ class Sites extends Component {
                 placeholder="County (Optional)"
               />
               <datalist id="county">
-                {this.state.sitesList.map(site => <option key={site._id}>{site.County}</option>)}
+                {this.state.sitesList.map(site => <option key={site._id}>{site.county}</option>)}
               </datalist>
               <Input
                 list="facility"
@@ -134,7 +134,7 @@ class Sites extends Component {
                 placeholder="Facility (Optional)"
               />
               <datalist id="facility">
-                {this.state.sitesList.map(site => <option key={site._id}>{site.Facility}</option>)}
+                {this.state.sitesList.map(site => <option key={site._id}>{site.facility}</option>)}
               </datalist>
               <FormBtn
                 onClick={this.handleFormSubmit}
@@ -153,15 +153,15 @@ class Sites extends Component {
                   <ListItem key={site._id}>
                     <Link to={"/sites/" + site._id}>
                       <span id="siteText">
-                        <strong>{site.Facility}</strong> in {site.City} in {site.County} County
+                        <strong>{site.facility}</strong> in {site.city} in {site.county} County
                         <br></br>
-                        Phone Number {site["Phone 1"]}
+                        Phone Number {site.phone_1}
                       </span>
                     </Link>
                     <div>
-                    <a href={"" + site["Web Address"]} target="blank">
+                    <a href={"" + site.web_address} target="blank">
                       <span id="siteText">
-                        Web Site {site["Web Address"]}
+                        Web Site {site.web_address}
                       </span>
                     </a>
                     </div>

@@ -15,16 +15,16 @@ class MultipleSitesMap extends Component {
       // Important! Always set the container height explicitly
       <div style={{ height: '300px', width: '100%', marginBottom: "15px" }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyAoUsjFYl3W9K6s5G6qEhB7et701_uYIk8" }}
+          bootstrapURLKeys={{ key: "AIzaSyBcs9lfkH6hl5Uov4eG2JhYHjoZceCgNnc" }}
           center={this.props.center}
           zoom={10}
         >
 
           {this.props.sites.map(sites => (
             <MapMarker
-              key={sites.Latitude}
-              lat={sites.Latitude}
-              lng={sites.Longitude}
+              key={sites.latitude}
+              lat={sites.latitude}
+              lng={sites.longitude}
             />
           ))}
 

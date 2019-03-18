@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-const objectId = mongoose.Schema.Types.ObjectId
+// const objectId = mongoose.Schema.Types.ObjectId
 const Schema = mongoose.Schema;
 
 const siteSchema = new Schema({
-  _id: objectId,
+  // _id: objectId,
   country: String,
   state: String,
   county: String,
@@ -11,8 +11,8 @@ const siteSchema = new Schema({
   facility: String,
   address: String,
   zip: { type: Number, min: 5, max: 5}, 
-  latitude: Schema.Types.Decimal128,
-  longitude: Schema.Types.Decimal128,
+  latitude: Number,
+  longitude: Number,
   phone_1: { type: String, min: 10, max: 14, required: true },
   phone_2: { type: String, min: 10, max: 14 },
   web_address: String,

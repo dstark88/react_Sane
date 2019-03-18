@@ -12,7 +12,7 @@ module.exports = {
     console.log("req.body.city: ", req.body.city);
 
     db.Site
-      .find({$or:[{ City: req.body.city}, { County: req.body.county}, { Facility: req.body.facility}]})
+      .find({$or:[{ city: req.body.city}, { county: req.body.county}, { facility: req.body.facility}]})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
