@@ -1,16 +1,15 @@
 import React from "react";
 
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
 
 function About() {
     return (
         <Container fluid>
             <Row>
                 <Col size="md-12">
-                    <Jumbotron>
+                    <center>
                         <h1 id="mainHeader">About Project SANE</h1>
-                    </Jumbotron>
+                    </center>
                 </Col>
             </Row>
             <Row>
@@ -38,10 +37,10 @@ function About() {
                         <Col size="md-12">
                             <h3><strong>View Our Portfolios:</strong></h3>
 
-                            <a href="https://dstark88.github.io/portfolio/" target="blank"><h5>Denise Stark</h5></a>
-                            <a href="https://tinali91.github.io/updatedPortfolio/" target="blank"><h5>Tina Li</h5></a>
-                            <a href="https://brookj1.github.io/jbrooksportfolio/" target="blank"><h5>Jamie Brooks</h5></a>
-                            <a href="https://gingerkrc.github.io/updated-portfolio/" target="blank"><h5>Ginger Conly</h5></a>
+                            <a href="https://dstark88.github.io/portfolio/" target="blank"><h4>Denise Stark</h4></a>
+                            <a href="https://tinali91.github.io/updatedPortfolio/" target="blank"><h4>Tina Li</h4></a>
+                            <a href="https://brookj1.github.io/jbrooksportfolio/" target="blank"><h4>Jamie Brooks</h4></a>
+                            <a href="https://gingerkrc.github.io/updated-portfolio/" target="blank"><h4>Ginger Conly</h4></a>
 
                         </Col>
                         <Col size="md-12">
@@ -49,15 +48,22 @@ function About() {
                             <br></br>
                             <h3><strong>Connect on LinkedIn:</strong></h3>
 
-                            <a href="https://www.linkedin.com/in/denise-stark-a9387516a/" target="blank"><h5>Denise Stark</h5></a>
-                            <a href="https://www.linkedin.com/in/tinacli/" target="blank"><h5>Tina Li</h5></a>
-                            <a href="https://www.linkedin.com/in/jamie-brooks-00172321/" target="blank"><h5>Jamie Brooks</h5></a>
-                            <a href="https://www.linkedin.com/in/ginger-conly/" target="blank"><h5>Ginger Conly</h5></a>
+                            <a href="https://www.linkedin.com/in/denise-stark-a9387516a/" target="blank"><h4>Denise Stark</h4></a>
+                            <a href="https://www.linkedin.com/in/tinacli/" target="blank"><h4>Tina Li</h4></a>
+                            <a href="https://www.linkedin.com/in/jamie-brooks-00172321/" target="blank"><h4>Jamie Brooks</h4></a>
+                            <a href="https://www.linkedin.com/in/ginger-conly/" target="blank"><h4>Ginger Conly</h4></a>
 
                         </Col>
                     </Row>
                 </Col>
             </Row>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </Container>
     );
 }

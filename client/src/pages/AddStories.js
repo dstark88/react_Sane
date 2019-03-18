@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import Jumbotron from "../components/Jumbotron";
 
 
 class Posts extends Component {
@@ -52,22 +51,23 @@ class Posts extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
-            <Jumbotron>
-            <h1 id="mainHeader">Add your story</h1>
-            <p id="mainInfo">Please share your story with others. Your identity will remain anonymous unless you choose to share it.</p>
-            </Jumbotron>
+          <Col size="md-2">
+            <button>
+                {!!this.state.loggedInUser || !!this.state.session ? (<a onClick={this.signOutClick}></a>)
+                : null}
+                <Link to="/Login">Sign Out</Link>
+            </button>
+          </Col>
+          <Col size="md-9">          
+            <center>
+              <h1 id="mainHeader">Share your story</h1>
+              <p id="mainInfo">Your identity will remain anonymous unless you choose to reveal it.</p>
+            </center>
           </Col>
         </Row>
-        <Row>          
-          <button>
-              {!!this.state.loggedInUser || !!this.state.session ? (<a onClick={this.signOutClick}></a>)
-              : null}
-              <Link to="/Login">Sign Out</Link>
-          </button>
-        </Row>
         <Row>
-          <Col size="md-12">
+          <Col size="md-1"></Col>
+          <Col size="md-10">
             <form>
               <Input
                 value={this.state.title}
