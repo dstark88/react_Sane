@@ -57,7 +57,7 @@ class SiteDetails extends Component {
                 <br></br>
                 <br></br>
                 <div>
-                    <a href={"" + this.state.site.Address} target="blank">
+                    <a href={"https://www.google.com/maps/dir/?api=1&destination=" + this.state.site.Latitude + "," + this.state.site.Longitude} target="blank">
                       <h3>
                         Get Directions
                       </h3>
