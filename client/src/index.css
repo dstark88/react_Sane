@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: black;
-  /* background: url ("AdobeStock_103776774.jpeg"); */
+  /* background: black; */
+  background-image: url ("/adobemountains.jpeg")!important;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -10,7 +10,7 @@ body {
   min-height: 100%;
   font-family: 'Open Sans Condensed', sans-serif;
 }
-
+ 
 h1, h2, h3, h4 {
   color: white;
   margin-bottom: 5%;
