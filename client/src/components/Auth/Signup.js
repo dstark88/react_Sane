@@ -112,6 +112,7 @@ export default class Login extends Component {
                     <div className="row mb-2">
                         <div className="col-md-12 text-center mb-1">
                             <button 
+                                onClick={this.signIn}
                                 type="submit" 
                                 className="btn btn-primary mt-2" 
                                 value="Sign Up!" >

@@ -9,7 +9,7 @@ function About() {
             <Row>
                 <Col size="md-12">
                     <Jumbotron>
-                        <h1>About Project SANE</h1>
+                        <h1 id="mainHeader">About Project SANE</h1>
                     </Jumbotron>
                 </Col>
             </Row>

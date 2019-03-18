@@ -30,9 +30,9 @@ class SiteDetails extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>
+              <h2>
                 SANE Site Map
-              </h1>
+              </h2>
             </Jumbotron>
               <SingleSiteMap 
                 center={this.state.center}
@@ -41,13 +41,11 @@ class SiteDetails extends Component {
           </Col>
           <Col size="md-6">
             <Jumbotron>
-              <h1>{this.state.site.facility}</h1>
+              <h2>{this.state.site.facility}</h2>
             </Jumbotron>
-              <h3>
-                <center>
-
-                {this.state.site.address}
-                <br></br>
+            <Row>
+              <p id="mainInfo">
+                {this.state.site.address}, {""}
                 {this.state.site.city}, {""}
                 {this.state.site.state} {""}
                 {this.state.site.zip}
@@ -55,35 +53,35 @@ class SiteDetails extends Component {
                 in {this.state.site.county} county
                 <br></br>
                 {this.state.site.phone_1}
-                <br></br>
-                <br></br>
-                <div>
-                    <a href={"https://www.google.com/maps/dir/?api=1&destination=" + this.state.site.latitude + "," + this.state.site.longitude} target="blank">
-                      <h3>
-                        Get Directions
-                      </h3>
-                    </a>
-                </div>
-                <div>
-                    <a href={"" + this.state.site.web_address} target="blank">
-                        <h3>
-                        Web Site:
-                        <br></br>
-                        {this.state.site.web_address}
-                        </h3>
-                    </a>
-                </div>
-                  Additional Information:
-                  <br></br>
-                  {this.state.site.additional_info}
-                  </center>
-              </h3>
+              </p>
+            </Row>
+            <Row>
+              <p id="mainInfo">
+                <a href={"https://www.google.com/maps/dir/?api=1&destination=" + this.state.site.latitude + "," + this.state.site.longitude} target="blank">
+                  <h3>Get Directions</h3>
+                </a>
+              </p>
+            </Row>
+            <Row>
+              <p id="mainInfo">
+                <a href={"" + this.state.site.web_address} target="blank">
+                  <h3>Web Site:</h3>
+                  {this.state.site.web_address}
+                </a>
+              </p>
+            </Row>
+            <Row>
+              <p id="mainInfo">
+                <h3>Additional Information:</h3>
+                {this.state.site.additional_info}
+              </p>
+            </Row>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
             <button>
-            <Link to="/sites">← Back to Locations</Link>
+              <Link to="/sites">Back to Locations</Link>
             </button>
           </Col>
         </Row>

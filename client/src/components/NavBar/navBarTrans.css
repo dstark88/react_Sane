@@ -32,6 +32,7 @@ button {
     cursor: pointer;
     font-family: 'Open Sans Condensed', sans-serif;
     box-shadow: 3px 3px 10px black;
+    margin-bottom: 40px;
 }
 
 .nav-link {

@@ -32,17 +32,19 @@ class StoryDetail extends Component {
         <Row>
           <Col size="md-1"></Col>
           <Col size="md-10">
-              <h3>
-              <center>
+              <p id="mainInfo">
                 {this.state.post.story}
-              </center>
-              </h3>      
+              </p>      
           </Col>
         </Row>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <Row>
           <Col size="md-2">
             <button>
-              <Link to="/stories">← Back to Stories</Link>
+              <Link to="/stories">Back to Stories</Link>
             </button>
           </Col>
         </Row>
