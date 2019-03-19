@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { instanceOf} from 'prop-types';
 import { withCookies, Cookies} from 'react-cookie';
 import UserLogin from '../components/Auth/UserLogin';
-import Wrapper from '../components/Wrapper';
+// import Wrapper from '../components/Wrapper';
 import Signup from '../components/Auth/Signup';
 import Axios from 'axios';
 
@@ -91,10 +91,9 @@ class Login extends Component {
       this.loadUserInfo();
   }
 
- 
   render() {
     return (
-      <Wrapper 
+      <div 
         logIn={this.state.loggedInUser} 
         signOut={this.signOut}
         session={this.state.session}>
@@ -113,8 +112,7 @@ class Login extends Component {
             />
           )
         }
-      </Wrapper>
-
+      </div>
     );
   }
 };

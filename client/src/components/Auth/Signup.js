@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Authcard from './Authcard';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import { Col, Row, Container } from "../Grid/index";
+import { Input } from "../Form/index";
 
 export default class Login extends Component {
     constructor(props) {
@@ -66,65 +68,71 @@ export default class Login extends Component {
 
     render() {
         return (
+        <Container fluid>
             <Authcard title="Sign Up">
-                <form className="col-md-12 login-input" 
-                    onSubmit={this.submitHandler}>
-                    <div className="row mb-3">
-                        <label htmlFor="username" 
-                            className="col-md-4 text-right">Username:</label>
-                        <div className="col-md-8">
-                            <input 
-                                type="text" 
-                                name="username" 
-                                placeholder="username" 
-                                className="form-control" 
-                                onChange={this.onUsernameChange} 
-                            />
-                            {this.state.signUpError === "username" ? 
+                <Row>
+                    <Col size="md-12">
+                        <form className="col-md-12 login-input" 
+                            onSubmit={this.submitHandler}>
+                            <Row>
+                                <Col size="md-12">
+                                    <label htmlFor="username" 
+                                        className="text-right">Username:</label>
+                                    <Input 
+                                        type="text" 
+                                        name="username" 
+                                        placeholder="username" 
+                                        className="form-control" 
+                                        onChange={this.onUsernameChange} 
+                                    />
+                                </Col>
+                            </Row>
+                            <Row>
+                                {this.state.signUpError === "username" ? 
                                 <div class="alert alert-warning" role="alert">
                                     {this.state.signUpErrorMsg}
                                 </div>
-                            :
-                                null
-                            }
-                        </div>
-                    </div>
-                    <div className="row mb-3">
-                        <label htmlFor="password" 
-                            className="col-md-4 text-right">Password:</label>
-                        <div className="col-md-8">
-                            <input 
-                                type="text" 
-                                name="password" 
-                                placeholder="password" 
-                                className="form-control" 
-                                onChange={this.onPasswordChange} 
-                            />
-                            {this.state.signUpError === "password" ? 
+                                :
+                                    null
+                                } 
+                                <Col size="md-12">
+                                    <label htmlFor="password" 
+                                        className="text-right">Password:</label>
+                                    <Input
+                                        type="text" 
+                                        name="password" 
+                                        placeholder="password" 
+                                        className="form-control" 
+                                        onChange={this.onPasswordChange} 
+                                    />
+                                </Col>
+                            </Row>
+                            <Row>
+                                {this.state.signUpError === "password" ? 
                                 <div class="alert alert-danger" role="alert">
                                     Your password must be atleast 6 characters long and no longer than 15 characters.
                                 </div>
-                            :
-                                null
-                            }
-                        </div>
-                    </div>
-                    <div className="row mb-2">
-                        <div className="col-md-12 text-center mb-1">
-                            <button 
-                                onClick={this.signIn}
-                                type="submit" 
-                                value="Sign Up!" >
-                                <Link className="nav-link" to="/Login">Submit</Link>
-                            </button>       
-                            <button 
-                                onClick={this.signIn}>
-                                <Link className="nav-link" to="/Login">Sign In!</Link>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                                :
+                                    null
+                                }
+                                <Col size="md-12" className="text-center">
+                                    <button 
+                                        onClick={this.signIn}
+                                        type="submit" 
+                                        value="Sign Up!" >
+                                        <Link className="nav-link" to="/Login">Submit</Link>
+                                    </button>       
+                                    <button 
+                                        onClick={this.signIn}>
+                                        <Link className="nav-link" to="/Login">Log In</Link>
+                                    </button>
+                                </Col>
+                            </Row>
+                        </form>
+                    </Col>
+                </Row>
             </ Authcard>
+        </Container>
         )
     }
 }
