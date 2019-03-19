@@ -1,16 +1,15 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
 
 function SaneP() {
   return (
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <Jumbotron>
+          <center>
             <h1>Advocates</h1>
-          </Jumbotron>
+          </center>
         </Col>
       </Row>
       <Row>
