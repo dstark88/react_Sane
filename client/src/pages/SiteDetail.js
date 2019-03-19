@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import SingleSiteMap from "../components/SingleSiteMap";
 
@@ -29,20 +28,21 @@ class SiteDetails extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
+            <center>
               <h2>
                 SANE Site Map
               </h2>
-            </Jumbotron>
+            </center>
               <SingleSiteMap 
                 center={this.state.center}
                 sites={this.state.site}
               />
           </Col>
-          <Col size="md-6">
-            <Jumbotron>
+          <Col size="md-1"></Col>
+          <Col size="md-5">
+            <center>
               <h2>{this.state.site.facility}</h2>
-            </Jumbotron>
+            </center>
             <Row>
               <p id="mainInfo">
                 {this.state.site.address}, {""}

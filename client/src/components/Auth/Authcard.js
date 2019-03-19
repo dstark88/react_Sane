@@ -14,7 +14,7 @@ return (
         <div className="login-group row">
             {props.children}        
         </div>
-    </div>
+    </div>    
 )
 }
 

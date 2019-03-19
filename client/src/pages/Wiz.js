@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
 
 import { Wizard, Steps } from 'react-albus';
 import { StepOne } from '../components/Wizard/StepOne';
@@ -12,7 +11,7 @@ function NoMatch() {
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <Jumbotron>
+          <center>
             <Wizard>
               <Steps>
                 <StepOne id="safe" />
@@ -20,7 +19,7 @@ function NoMatch() {
               </Steps>
               <Navigation />
             </Wizard>
-          </Jumbotron>
+          </center>
         </Col>
       </Row>
     </Container>

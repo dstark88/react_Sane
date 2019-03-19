@@ -32,7 +32,7 @@ h3{
 
 #mainHeader {
   font-family: 'Fredericka the Great', cursive;
-  font-size: 83px;
+  font-size: 80px;
 }
 
 #mainInfo {
@@ -50,6 +50,9 @@ h3{
   color: black;
 }
 
-
+.story {
+  padding: 20px;
+  background: rgba(89, 83, 94, 0.65);
+}
 
 

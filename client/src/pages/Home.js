@@ -1,18 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
 
 function Home() {
   return (
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <Jumbotron>
+          <center>
             <h1 id="mainHeader">Project S.A.N.E.</h1>
             <p id="mainInfo">Search for a Sexual Assaunt Nurse Examiner (S.A.N.E.) in the Rocky Mountain Region.</p>
             <button><Link className="nav-link" to="/Wiz">SANE Locator</Link></button>
-          </Jumbotron>
+          </center>
         </Col>
       </Row>
     </Container>

@@ -31,7 +31,7 @@ class StoryDetail extends Component {
         <Row>
           <Col size="md-1"></Col>
           <Col size="md-10">
-              <p id="mainInfo">
+              <p id="mainInfo" class="story">
                 {this.state.post.story}
               </p>      
           </Col>

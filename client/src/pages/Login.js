@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { instanceOf} from 'prop-types';
 import { withCookies, Cookies} from 'react-cookie';
-// import './App.css';
 import UserLogin from '../components/Auth/UserLogin';
 import Wrapper from '../components/Wrapper';
 import Signup from '../components/Auth/Signup';

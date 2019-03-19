@@ -18,10 +18,6 @@ export default {
   deleteSite: function(id) {
     return axios.delete("/api/sites/" + id);
   },
-  // Saves a site to the database
-  // saveSite: function(bookData) {
-  //   return axios.post("/api/sites", siteData);
-  // }
 
   createPost: function(postInfo) {
     return axios.post("/api/posts/", postInfo);
@@ -34,10 +30,7 @@ export default {
   getPost: function(id) {
     return axios.get("/api/posts/" + id);
   },
-  // Deletes the book with the given id
-  // deleteBook: function(id) {
-  //   return axios.delete("/api/books/" + id);
-  // },
+
   // Saves to the database
   savePost: function(postData) {
     return axios.post("/api/posts", postData);
@@ -50,8 +43,4 @@ export default {
   getUsers: function() {
     return axios.get("/api/users/");
   },
-  // Saves to the database
-  // saveUser: function(userData) {
-  //   return axios.post("/api/users", userData);
-  // },
 };
