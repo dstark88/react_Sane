@@ -4,7 +4,7 @@ body {
   background-image: url("./adobemountains.jpg");
   /* background: grey; */
   /* background-image: url ("/adobemountains.jpeg")!important; */
-  background-size: cover;
+  background-size: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
