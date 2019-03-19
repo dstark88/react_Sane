@@ -153,10 +153,11 @@ class Sites extends Component {
                       <span id="siteText">
                         <strong>{site.facility}</strong> in {site.city} in {site.county} County
                         <br></br>
-                        Phone Number {site.phone_1}
                       </span>
                     </Link>
                     <div>
+                    <a href={"tel:" + site.phone_1}><span id="siteText">Phone Number: {site.phone_1}</span></a>
+                    <br></br>
                     <a href={"" + site.web_address} target="blank">
                       <span id="siteText">
                         Web Site {site.web_address}

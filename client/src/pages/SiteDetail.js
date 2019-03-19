@@ -52,7 +52,7 @@ class SiteDetails extends Component {
                 <br></br>
                 in {this.state.site.county} county
                 <br></br>
-                {this.state.site.phone_1}
+                Call: <a id="mainInfo" href={"tel:" + this.state.site.phone_1}>{this.state.site.phone_1}</a>
               </p>
             </Row>
             <Row>
