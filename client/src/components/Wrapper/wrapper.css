@@ -3,8 +3,7 @@
     background-size: 100%;
     display: flex;
     flex-flow: row wrap;
-    padding: 20px 10px;
-    margin-bottom: 20px;
+    padding: 10px 10px;
     justify-content: space-around;
     align-content: flex-start;
     /* overflow: auto; */

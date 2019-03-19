@@ -38,43 +38,53 @@ class SiteDetails extends Component {
                 sites={this.state.site}
               />
           </Col>
-          <Col size="md-1"></Col>
-          <Col size="md-5">
+          <Col size="md-6">
             <center>
               <h2>{this.state.site.facility}</h2>
             </center>
             <Row>
-              <p id="mainInfo">
-                {this.state.site.address}, {""}
-                {this.state.site.city}, {""}
-                {this.state.site.state} {""}
-                {this.state.site.zip}
-                <br></br>
-                in {this.state.site.county} county
-                <br></br>
-                Call: <a id="mainInfo" href={"tel:" + this.state.site.phone_1}>{this.state.site.phone_1}</a>
-              </p>
+              <Col size="md-12">
+                <p id="mainInfo" class="siteInfo">
+                  {this.state.site.address}, {""}
+                  {this.state.site.city}, {""}
+                  {this.state.site.state} {""}
+                  {this.state.site.zip}
+                  
+                  <br></br>
+                  in {this.state.site.county} county
+                  <br></br>
+                  Call: <a id="mainInfo" class="siteInfo" href={"tel:" + this.state.site.phone_1}>{this.state.site.phone_1}</a>
+                </p>
+              </Col>
             </Row>
             <Row>
-              <p id="mainInfo">
-                <a href={"https://www.google.com/maps/dir/?api=1&destination=" + this.state.site.latitude + "," + this.state.site.longitude} target="blank">
-                  <h3>Get Directions</h3>
-                </a>
-              </p>
+              <Col size="md-12">
+                <p id="mainInfo" class="siteInfo">
+                  <a href={"https://www.google.com/maps/dir/?api=1&destination=" + this.state.site.latitude + "," + this.state.site.longitude} target="blank">
+                    <h3>Get Directions</h3>
+                  </a>
+                </p>
+              </Col>
             </Row>
             <Row>
-              <p id="mainInfo">
-                <a href={"" + this.state.site.web_address} target="blank">
-                  <h3>Web Site:</h3>
-                  {this.state.site.web_address}
-                </a>
-              </p>
+              <Col size="md-12">
+                <p id="mainInfo" class="siteInfo">
+                  <a href={"" + this.state.site.web_address} target="blank">
+                    <center>
+                    <h3>Web Site:</h3>
+                    </center>
+                    {this.state.site.web_address}
+                  </a>
+                </p>
+              </Col>
             </Row>
             <Row>
-              <p id="mainInfo">
-                <h3>Additional Information:</h3>
-                {this.state.site.additional_info}
-              </p>
+              <Col size="md-12">
+                <p id="mainInfo" class="siteInfo">
+                  <h3>Additional Information:</h3>
+                  {this.state.site.additional_info}
+                </p>
+              </Col>
             </Row>
           </Col>
         </Row>
