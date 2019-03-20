@@ -10,7 +10,7 @@ function SaneP() {
           <center>
             <h1>Local Advocates</h1>
             <p id="mainInfo">
-              A trained sexual assault advocate can help you navigate your options and plan your next steps. They can also help walk you through the process of reporting, accompany you to the hospital, find a counselor, and more. Many organizations have 24/7 hotlines available as a resource.
+              A trained sexual assault advocate can help with navigating options and planning next steps. They can also help walk someone through the process of reporting, accompany them to the hospital, find a counselor, and more. Many organizations have 24/7 hotlines available as a resource.
             </p>
           </center>
         </Col>
