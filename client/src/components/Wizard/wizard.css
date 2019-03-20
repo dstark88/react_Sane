@@ -9,7 +9,5 @@ button, .btn-fluid, .btn-secondary {
     font-family: 'Open Sans Condensed', sans-serif;
     box-shadow: 3px 3px 10px black;  
 }
-.btn-secondary {
-    margin-bottom: 40px;
-}
+
 

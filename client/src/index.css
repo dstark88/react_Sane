@@ -1,3 +1,24 @@
+* {
+  box-sizing: border-box;
+ }
+ *:before,
+ *:after {
+  box-sizing: border-box;
+ }
+
+ html,
+body {
+ height: 100%;
+ position: relative;
+}
+.main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 20px; /* height of your footer */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -49,9 +70,12 @@ h3{
 #storyText {
   color: black;
 }
-
+.siteInfo {
+  text-align: center;
+}
 .story {
   padding: 20px;
+  white-space: pre-line;
   background: rgba(89, 83, 94, 0.65);
 }
 
