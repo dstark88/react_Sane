@@ -24,6 +24,9 @@ class Sites extends Component {
       lng: null,
     },
     sitesList: [],
+    cityList: [],
+    countyList: [],
+    facilityList: [],
   };
 
   componentDidMount() {
@@ -54,8 +57,27 @@ class Sites extends Component {
   loadSites = () => {
     API.getSites()
       .then(res => {
-        console.log("load sites data", res);
-        this.setState({ sitesList: res.data, city: "", county: "", facility: "" })
+        var city= [];
+        var county= [];
+        var facility= [];
+        res.data.filter(function(soloSite) {
+          if (!city.includes(soloSite.city)) {
+            return city.push(soloSite.city)
+          }
+        })
+        res.data.filter(function(soloSite) {
+        if (!county.includes(soloSite.county)) {
+          return county.push(soloSite.county)
+        }
+        })
+        res.data.filter(function(soloSite) {
+        if (!facility.includes(soloSite.facility)) {
+          return facility.push(soloSite.facility)
+        }
+        })
+        this.setState({ sitesList: res.data, cityList: [...city], countyList: [...county], facilityList: [...facility] })
+        console.log("state arrays", this.state.city, this.state.county, this.state.facility);
+        
       })
       .catch(err => console.log(err));
   };
@@ -112,7 +134,7 @@ class Sites extends Component {
                 placeholder="City (Optional)"
               />
               <datalist id="city">
-                {this.state.sitesList.map(site => <option key={site._id}>{site.city}</option>)}
+                {this.state.cityList.map(site => <option key={site}>{site}</option>)}
               </datalist>
               <Input
                 list="county"
@@ -122,7 +144,7 @@ class Sites extends Component {
                 placeholder="County (Optional)"
               />
               <datalist id="county">
-                {this.state.sitesList.map(site => <option key={site._id}>{site.county}</option>)}
+                {this.state.countyList.map(site => <option key={site}>{site}</option>)}
               </datalist>
               <Input
                 list="facility"
@@ -132,7 +154,7 @@ class Sites extends Component {
                 placeholder="Facility (Optional)"
               />
               <datalist id="facility">
-                {this.state.sitesList.map(site => <option key={site._id}>{site.facility}</option>)}
+                {this.state.facilityList.map(site => <option key={site}>{site}</option>)}
               </datalist>
               <FormBtn
                 onClick={this.handleFormSubmit}
