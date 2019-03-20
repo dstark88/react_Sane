@@ -79,5 +79,9 @@ h3{
   margin: 5px;
   background: rgba(89, 83, 94, 0.65);
 }
-
-
+#storyList {
+  background: rgba(89, 83, 94, 0.65);
+  color: white;
+  margin: 5px;
+  padding: 20px;
+}

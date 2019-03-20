@@ -12,8 +12,8 @@ function About() {
                 </Col>
             </Row>
             <Row>
-                <Col size="md-1"></Col>
-                <Col size="md-7">
+                {/* <Col size="md-1"></Col> */}
+                <Col size="md-9">
                     <p id="mainInfo" className="story">
                         Project S.A.N.E. is a tool designed for locating sexual assault nurse examiners (SANE) throughout the Rocky Mountain Region.
                         The lack of education and awareness about SANE nurses drove the design for both this and Project 2. Project 2, CO SANE, focused heavily on providers and gathering and maintaining their information. Project 3, Project S.A.N.E., focuses on resources and support for individuals.
@@ -31,12 +31,12 @@ function About() {
                         information and tools for sexual assault victims and advocates.
                     </p>
                 </Col>
-                <Col size="md-4">
+                <Col size="md-3">
                     <Row>
                         <Col size="md-12">
                             <div className="story">
                                 <h3><strong>View Our Portfolios:</strong></h3>
-
+                                <br></br>
                                 <a href="https://dstark88.github.io/portfolio/" target="blank"><h4>Denise Stark</h4></a>
                                 <a href="https://tinali91.github.io/updatedPortfolio/" target="blank"><h4>Tina Li</h4></a>
                                 <a href="https://brookj1.github.io/jbrooksportfolio/" target="blank"><h4>Jamie Brooks</h4></a>
@@ -46,7 +46,7 @@ function About() {
                         <Col size="md-12">
                             <div className="story">
                                 <h3><strong>Connect on LinkedIn:</strong></h3>
-
+                                <br></br>
                                 <a href="https://www.linkedin.com/in/denise-stark-a9387516a/" target="blank"><h4>Denise Stark</h4></a>
                                 <a href="https://www.linkedin.com/in/tinacli/" target="blank"><h4>Tina Li</h4></a>
                                 <a href="https://www.linkedin.com/in/jamie-brooks-00172321/" target="blank"><h4>Jamie Brooks</h4></a>
@@ -56,8 +56,6 @@ function About() {
                     </Row>
                 </Col>
             </Row>
-            <br></br>
-            <br></br>
             <br></br>
             <br></br>
         </Container>

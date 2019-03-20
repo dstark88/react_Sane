@@ -39,21 +39,27 @@ class Posts extends Component {
             <center>
               <button><Link className="nav-link" to="/Login">Add Your Story</Link></button>
             </center>
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-1"></Col>
+          <Col size="md-10">
             {this.state.posts.length ? (
               <List>
                 {this.state.posts.map(post => (
                   <ListItem key={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <p id="mainInfo"><strong id="storyText">
-                      <center>
+                      <center><strong>
                         {post.title},
                         <br></br> 
                         by {post.author}
+                        </strong>
                         </center>
                       </strong>
                       </p>
                       <p id="mainInfo"><strong id="storyText">
-                        {post.story.slice(0,300)}<h4>...read more</h4>
+                        {post.story.slice(0,400)}<strong>...read more</strong>
                       </strong>
                       </p>
                     </Link>
