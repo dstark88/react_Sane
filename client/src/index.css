@@ -76,6 +76,7 @@ h3{
 .story {
   padding: 20px;
   white-space: pre-line;
+  margin: 5px;
   background: rgba(89, 83, 94, 0.65);
 }
 

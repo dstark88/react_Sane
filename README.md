@@ -1,29 +1,27 @@
-# Create React Express App
+# Project SANE
 
-## About This Boilerplate
+Deployed app: https://desolate-fjord-57134.herokuapp.com/
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## About This Application
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+Project S.A.N.E. is a tool designed for locating sexual assault nurse examiners (SANE) throughout the Rocky Mountain Region. It integrates the ability to search for by city, county and facility and returns information based on what is passed through. On searching for each of those, the map will re-render to focus on the locations based on the search results. 
 
-## Starting the app locally
+We also included a place where people can share their stories with other users to build a sense of community around shared experiences. 
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+This project was developed as a part of the University of Denver's first all women's full stack web development cohort. 
 
-```
-npm install
-```
+## Technologies Used
 
-This should install node modules within the server and the client folder.
+We used a variety of front end and back end technologies for this project including:
 
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+* React
+* Mongo
+* Node
+* Express
+* Bootstrap
+* Mongo Import
+* React-Albus (Wizard)
+* Google-Map-React
+* React-Cookie
+* Bcrypt
+* HTML Geolocation
