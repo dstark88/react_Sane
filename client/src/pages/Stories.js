@@ -71,7 +71,13 @@ class Posts extends Component {
               )}
           </Col>
         </Row>
-
+        <Row>
+          <Col size="md-2">
+            <button>
+              <Link to="/">Back to Home</Link>
+            </button>
+          </Col>
+        </Row>
       </Container>
     );
   }

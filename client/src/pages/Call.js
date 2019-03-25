@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 
 function Call() {
@@ -12,10 +12,13 @@ function Call() {
           </center>
         </Col>
       </Row>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      <Row>
+        <Col size="md-2">
+          <button>
+            <Link to="/">Back to Home</Link>
+          </button>
+        </Col>
+      </Row>
     </Container>
   );
 }

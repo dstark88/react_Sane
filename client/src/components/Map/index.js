@@ -9,6 +9,14 @@ const MapMarker = () => (
 
 class MultipleSitesMap extends Component {
 
+//   onMarkerClick = (event) => {
+//     console.log("marker clicked");
+//     this.props.onMarkerClicked({
+//         site: event.target.src,
+//         site: event.target.id,
+//     });
+// };
+
   render() {
     // console.log(this.props.sites);
     return (
